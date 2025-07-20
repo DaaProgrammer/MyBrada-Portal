@@ -142,3 +142,529 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 13:05:54 --> Error: Class "App\Filters\Services" not found
+[Method: GET, Route: login]
+in APPPATH\Filters\JWTAuthFilter.php on line 17.
+ 1 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('login', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 13:05:59 --> Error: Class "App\Filters\Services" not found
+[Method: GET, Route: login]
+in APPPATH\Filters\JWTAuthFilter.php on line 17.
+ 1 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('login', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 13:05:59 --> Error: Class "App\Filters\Services" not found
+[Method: GET, Route: login]
+in APPPATH\Filters\JWTAuthFilter.php on line 17.
+ 1 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('login', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 13:06:00 --> Error: Class "App\Filters\Services" not found
+[Method: GET, Route: login]
+in APPPATH\Filters\JWTAuthFilter.php on line 17.
+ 1 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('login', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 13:06:00 --> Error: Class "App\Filters\Services" not found
+[Method: GET, Route: login]
+in APPPATH\Filters\JWTAuthFilter.php on line 17.
+ 1 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('login', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:12:29 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMDc0OSwiZXhwIjoxNzUzMDI0MzQ5LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:14:50 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMDg5MCwiZXhwIjoxNzUzMDI0NDkwLCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:15:15 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMDkxNSwiZXhwIjoxNzUzMDI0NTE1LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:16:04 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMDk2NCwiZXhwIjoxNzUzMDI0NTY0LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:16:18 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMDk3OCwiZXhwIjoxNzUzMDI0NTc4LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:26:49 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMTYwOSwiZXhwIjoxNzUzMDI1MjA5LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:31:45 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMTkwNSwiZXhwIjoxNzUzMDI1NTA1LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:32:13 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMTkzMywiZXhwIjoxNzUzMDI1NTMzLCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:32:19 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMTkzOSwiZXhwIjoxNzUzMDI1NTM5LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:32:23 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMTk0MywiZXhwIjoxNzU1NjEzOTQzLCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 2592000)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:32:28 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMTk0OCwiZXhwIjoxNzU1NjEzOTQ4LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 2592000)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:32:53 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMTk3MywiZXhwIjoxNzU1NjEzOTczLCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 2592000)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:32:57 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMTk3NywiZXhwIjoxNzU1NjEzOTc3LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 2592000)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:33:14 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMTk5NCwiZXhwIjoxNzUzMDI1NTk0LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImFzZGFAYXNkYXMuY29vbSIsIm5hbWUiOiJUZXN0IFVzZXIifX0', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:33:59 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMjAzOSwiZXhwIjoxNzUzMDI1NjM5LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImFzZGFAYXNkYXMuY29vbSIsIm5hbWUiOiJUZXN0IFVzZXIifX0', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:35:45 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMjE0NSwiZXhwIjoxNzUzMDI1NzQ1LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImFzZGFAYXNkYXMuY29vbSIsIm5hbWUiOiJUZXN0IFVzZXIifX0', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:36:16 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMjE3NiwiZXhwIjoxNzUzMDI1Nzc2LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImFzZGFAYXNkYXMuY29vbSIsIm5hbWUiOiJUZXN0IFVzZXIifX0', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:37:07 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMjIyNywiZXhwIjoxNzUzMDI1ODI3LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImFzZGFAYXNkYXMuY29vbSIsIm5hbWUiOiJUZXN0IFVzZXIifX0', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:37:25 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMjI0NSwiZXhwIjoxNzUzMDI1ODQ1LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImFzZGFAYXNkYXMuY29vbSIsIm5hbWUiOiJUZXN0IFVzZXIifX0', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:47:04 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMjgyNCwiZXhwIjoxNzUzMDI2NDI0LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:48:22 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMjkwMiwiZXhwIjoxNzUzMDI2NTAyLCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:50:16 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: attemptLogin]
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 249.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyMzAxNiwiZXhwIjoxNzUzMDI2NjE2LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(15): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 14:52:20 --> Exception: JWT_SECRET not set in .env file
+[Method: POST, Route: attemptLogin]
+in APPPATH\Helpers\jwt_helper.php on line 25.
+ 1 APPPATH\Controllers\Auth.php(106): generateJWT([...], 3600)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 15:43:34 --> TypeError: CodeIgniter\Cookie\Cookie::validatePrefix(): Argument #1 ($prefix) must be of type string, false given, called in C:\Users\user-pc\Music\Ruined\MyBradaPortal\system\Cookie\Cookie.php on line 232
+[Method: POST, Route: attemptLogin]
+in SYSTEMPATH\Cookie\Cookie.php on line 741.
+ 1 SYSTEMPATH\Cookie\Cookie.php(232): CodeIgniter\Cookie\Cookie->validatePrefix(false, true, '/', '')
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(545): CodeIgniter\Cookie\Cookie->__construct('access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyNjIxNCwiZXhwIjoxNzUzMDI5ODE0LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19.EL4MuVtfTYQcWHIqJug4WTh7fQpwSdfTH19pUWftSFI', [...])
+ 3 APPPATH\Controllers\Auth.php(120): CodeIgniter\HTTP\Response->setCookie('access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyNjIxNCwiZXhwIjoxNzUzMDI5ODE0LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19.EL4MuVtfTYQcWHIqJug4WTh7fQpwSdfTH19pUWftSFI', 1753029814, '', '', false, true)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 15:45:40 --> TypeError: CodeIgniter\Cookie\Cookie::validatePrefix(): Argument #1 ($prefix) must be of type string, false given, called in C:\Users\user-pc\Music\Ruined\MyBradaPortal\system\Cookie\Cookie.php on line 232
+[Method: POST, Route: attemptLogin]
+in SYSTEMPATH\Cookie\Cookie.php on line 741.
+ 1 SYSTEMPATH\Cookie\Cookie.php(232): CodeIgniter\Cookie\Cookie->validatePrefix(false, true, '/', '')
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(545): CodeIgniter\Cookie\Cookie->__construct('access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyNjM0MCwiZXhwIjoxNzUzMDI5OTQwLCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19.KQ7SjvjUyJtYKiPYxgli7lItIUtBjllSqD4Xsl9wtK8', [...])
+ 3 APPPATH\Controllers\Auth.php(120): CodeIgniter\HTTP\Response->setCookie('access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyNjM0MCwiZXhwIjoxNzUzMDI5OTQwLCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19.KQ7SjvjUyJtYKiPYxgli7lItIUtBjllSqD4Xsl9wtK8', 1753029940, '', '', false, true)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 15:47:12 --> TypeError: CodeIgniter\Cookie\Cookie::validatePrefix(): Argument #1 ($prefix) must be of type string, false given, called in C:\Users\user-pc\Music\Ruined\MyBradaPortal\system\Cookie\Cookie.php on line 232
+[Method: POST, Route: attemptLogin]
+in SYSTEMPATH\Cookie\Cookie.php on line 741.
+ 1 SYSTEMPATH\Cookie\Cookie.php(232): CodeIgniter\Cookie\Cookie->validatePrefix(false, true, '/', '')
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(545): CodeIgniter\Cookie\Cookie->__construct('access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyNjQzMiwiZXhwIjoxNzUzMDMwMDMyLCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19.VWnqy6aGCp_Re5Pjy_cZ2DuS--vCfOqkf0i3Q9yMX8A', [...])
+ 3 APPPATH\Controllers\Auth.php(120): CodeIgniter\HTTP\Response->setCookie('access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyNjQzMiwiZXhwIjoxNzUzMDMwMDMyLCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19.VWnqy6aGCp_Re5Pjy_cZ2DuS--vCfOqkf0i3Q9yMX8A', 1753030032, '', '', false, true)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 15:48:49 --> TypeError: CodeIgniter\Cookie\Cookie::validatePrefix(): Argument #1 ($prefix) must be of type string, false given, called in C:\Users\user-pc\Music\Ruined\MyBradaPortal\system\Cookie\Cookie.php on line 232
+[Method: POST, Route: attemptLogin]
+in SYSTEMPATH\Cookie\Cookie.php on line 741.
+ 1 SYSTEMPATH\Cookie\Cookie.php(232): CodeIgniter\Cookie\Cookie->validatePrefix(false, true, '/', '')
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(545): CodeIgniter\Cookie\Cookie->__construct('access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyNjUyOSwiZXhwIjoxNzUzMDMwMTI5LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19.GUMXLGVCG5YNc_B7N_LHh_1srtfWrcStKF3s1oSxxeA', [...])
+ 3 APPPATH\Controllers\Auth.php(120): CodeIgniter\HTTP\Response->setCookie('access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyNjUyOSwiZXhwIjoxNzUzMDMwMTI5LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19.GUMXLGVCG5YNc_B7N_LHh_1srtfWrcStKF3s1oSxxeA', 1753030129, '', '', false, true)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 15:48:55 --> TypeError: CodeIgniter\Cookie\Cookie::validatePrefix(): Argument #1 ($prefix) must be of type string, false given, called in C:\Users\user-pc\Music\Ruined\MyBradaPortal\system\Cookie\Cookie.php on line 232
+[Method: POST, Route: attemptLogin]
+in SYSTEMPATH\Cookie\Cookie.php on line 741.
+ 1 SYSTEMPATH\Cookie\Cookie.php(232): CodeIgniter\Cookie\Cookie->validatePrefix(false, true, '/', '')
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(545): CodeIgniter\Cookie\Cookie->__construct('access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyNjUzNSwiZXhwIjoxNzUzMDMwMTM1LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19.FpzqCJm8DyP0LP-qnBgCgyMSnX5gVnQqwlmsyAWSBeU', [...])
+ 3 APPPATH\Controllers\Auth.php(120): CodeIgniter\HTTP\Response->setCookie('access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyNjUzNSwiZXhwIjoxNzUzMDMwMTM1LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19.FpzqCJm8DyP0LP-qnBgCgyMSnX5gVnQqwlmsyAWSBeU', 1753030135, '', '', false, true)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 15:53:57 --> TypeError: Key material must be a string, resource, or OpenSSLAsymmetricKey
+[Method: GET, Route: dashboard]
+in VENDORPATH\firebase\php-jwt\src\Key.php on line 26.
+ 1 APPPATH\Filters\JWTAuthFilter.php(22): Firebase\JWT\Key->__construct(false, 'HS256')
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 15:54:49 --> TypeError: CodeIgniter\Cookie\Cookie::validatePrefix(): Argument #1 ($prefix) must be of type string, false given, called in C:\Users\user-pc\Music\Ruined\MyBradaPortal\system\Cookie\Cookie.php on line 232
+[Method: POST, Route: attemptLogin]
+in SYSTEMPATH\Cookie\Cookie.php on line 741.
+ 1 SYSTEMPATH\Cookie\Cookie.php(232): CodeIgniter\Cookie\Cookie->validatePrefix(false, true, '/', '')
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(545): CodeIgniter\Cookie\Cookie->__construct('access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyNjg4OSwiZXhwIjoxNzUzMDMwNDg5LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19.Qi1vq0G23IrpKtZFOjSi09L3j0Za925kGgSKL0X7WIc', [...])
+ 3 APPPATH\Controllers\Auth.php(121): CodeIgniter\HTTP\Response->setCookie('access_token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJteWJyYWRhIiwiYXVkIjoibXlicmFkYS11c2VycyIsImlhdCI6MTc1MzAyNjg4OSwiZXhwIjoxNzUzMDMwNDg5LCJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6IjEyM3NwaGFuZ2lkaUBnbWFpbC5jb20iLCJuYW1lIjoiVGVzdCBVc2VyIn19.Qi1vq0G23IrpKtZFOjSi09L3j0Za925kGgSKL0X7WIc', 1753030489, '', '', false, true)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 15:55:48 --> TypeError: Key material must be a string, resource, or OpenSSLAsymmetricKey
+[Method: GET, Route: dashboard]
+in VENDORPATH\firebase\php-jwt\src\Key.php on line 26.
+ 1 APPPATH\Filters\JWTAuthFilter.php(22): Firebase\JWT\Key->__construct(false, 'HS256')
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 15:56:04 --> TypeError: Key material must be a string, resource, or OpenSSLAsymmetricKey
+[Method: GET, Route: dashboard]
+in VENDORPATH\firebase\php-jwt\src\Key.php on line 26.
+ 1 APPPATH\Filters\JWTAuthFilter.php(22): Firebase\JWT\Key->__construct(false, 'HS256')
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 15:57:15 --> TypeError: Key material must be a string, resource, or OpenSSLAsymmetricKey
+[Method: GET, Route: dashboard]
+in VENDORPATH\firebase\php-jwt\src\Key.php on line 26.
+ 1 APPPATH\Filters\JWTAuthFilter.php(22): Firebase\JWT\Key->__construct(false, 'HS256')
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 15:57:23 --> TypeError: Key material must be a string, resource, or OpenSSLAsymmetricKey
+[Method: GET, Route: responders]
+in VENDORPATH\firebase\php-jwt\src\Key.php on line 26.
+ 1 APPPATH\Filters\JWTAuthFilter.php(22): Firebase\JWT\Key->__construct(false, 'HS256')
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('responders', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 16:11:53 --> TypeError: Key material must be a string, resource, or OpenSSLAsymmetricKey
+[Method: GET, Route: dashboard]
+in VENDORPATH\firebase\php-jwt\src\Key.php on line 26.
+ 1 APPPATH\Filters\JWTAuthFilter.php(22): Firebase\JWT\Key->__construct(false, 'HS256')
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 16:13:16 --> TypeError: Key material must be a string, resource, or OpenSSLAsymmetricKey
+[Method: GET, Route: dashboard]
+in VENDORPATH\firebase\php-jwt\src\Key.php on line 26.
+ 1 APPPATH\Filters\JWTAuthFilter.php(22): Firebase\JWT\Key->__construct(false, 'HS256')
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-20 16:13:58 --> TypeError: Key material must be a string, resource, or OpenSSLAsymmetricKey
+[Method: GET, Route: dashboard]
+in VENDORPATH\firebase\php-jwt\src\Key.php on line 26.
+ 1 APPPATH\Filters\JWTAuthFilter.php(22): Firebase\JWT\Key->__construct(false, 'HS256')
+ 2 SYSTEMPATH\Filters\Filters.php(241): App\Filters\JWTAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
