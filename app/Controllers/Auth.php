@@ -2,78 +2,27 @@
 
 namespace App\Controllers;
 
-use App\Models\UserModel;
+use App\Models\AuthModel;
 use CodeIgniter\HTTP\ResponseInterface;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
+use App\Libraries\SupabaseService;
 
 helper('jwt');
 
 class Auth extends BaseController
 {
+    protected $supabase;
+
+    public function __construct()
+    {
+        $this->supabase = new SupabaseService();
+    }
+
     public function index(): string
     {
         return view('auth/login');
     }
-
-    // public function attemptLogin()
-    // {
-    //     helper('form');
-    //     $validation =  \Config\Services::validation();
-
-    //     $rules = [
-    //         'email' => 'required|valid_email',
-    //         'password' => 'required|min_length[6]'
-    //     ];
-
-    //     if (!$this->validate($rules)) {
-    //         // Return back with validation errors & old input
-    //         return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-    //     }
-
-    //     $email = $this->request->getPost('email');
-    //     $password = $this->request->getPost('password');
-    //     $remember = $this->request->getPost('remember');
-
-    //     $userModel = new UserModel();
-    //     $user = $userModel->where('email', $email)->first();
-
-    //     if ($user && password_verify($password, $user['password'])) {
-    //         $expireIn = $remember ? (86400 * 30) : 3600; // 30 days vs 1 hour
-
-    //         $accessToken = generateJWT([
-    //             'id' => $user['id'],
-    //             'email' => $user['email'],
-    //             'name' => $user['name']
-    //         ], $expireIn);
-
-    //         $refreshToken = generateJWT([
-    //             'id' => $user['id'],
-    //             'email' => $user['email'],
-    //             'name' => $user['name'],
-    //             'refresh' => true
-    //         ], 86400 * 30); // refresh token valid for 30 days
-
-    //         // Set tokens in HTTP-only cookies
-    //         $this->response->setCookie('access_token', $accessToken, $expireIn, '', '', false, true);
-    //         $this->response->setCookie('refresh_token', $refreshToken, 86400 * 30, '', '', false, true);
-
-    //         // Redirect to dashboard or intended page
-    //         // return redirect()->to('/dashboard');
-    //         return $this->response->setJSON([
-    //             'status' => 'success',
-    //             'token' => $accessToken,
-    //             'expires_in' => $expireIn
-    //         ]);
-    //     }
-
-    //     return $this->response->setJSON([
-    //         'status' => 'error',
-    //         'message' => 'Invalid credentials'
-    //     ]);
-
-    // }
-
 
     public function attemptLogin()
     {
@@ -86,64 +35,77 @@ class Auth extends BaseController
             'password' => 'required|min_length[6]'
         ];
 
-        if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
+if (!$this->validate($rules)) {
+    return $this->response->setJSON([
+        'status' => 'error',
+        'errors' => $this->validator->getErrors()
+    ])->setStatusCode(422);
+}
 
-        // Instead of validating user credentials, just simulate success:
         $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
         $remember = $this->request->getPost('remember');
 
-        // Fake user data
-        $user = [
-            'id' => 1,
-            'email' => $email,
-            'name' => 'Test User',
-            'password' => password_hash('password123', PASSWORD_DEFAULT) // not actually used here
-        ];
+        $AuthModel = new AuthModel();
+        $user = $AuthModel->AuthLogin($email);
+        if (!$user) {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'User not found']);
+            exit;
+        }
 
-        $expireIn = $remember ? (86400 * 30) : 3600; // 30 days vs 1 hour
+        // if ($user && password_verify($password, $user['password'])) {
+        //     $expireIn = $remember ? (86400 * 30) : 3600; // 30 days vs 1 hour
 
-        $accessToken = generateJWT([
-            'id' => $user['id'],
-            'email' => $user['email'],
-            'name' => $user['name']
-        ], $expireIn);
+        //     $accessToken = generateJWT([
+        //         'id' => $user['id'],
+        //         'email' => $user['email'],
+        //         'name' => $user['name']
+        //     ], $expireIn);
 
 
-        $refreshToken = generateJWT([
-            'id' => $user['id'],
-            'email' => $user['email'],
-            'name' => $user['name'],
-            'refresh' => true
-        ], 86400 * 30);
+        //     $refreshToken = generateJWT([
+        //         'id' => $user['id'],
+        //         'email' => $user['email'],
+        //         'name' => $user['name'],
+        //         'refresh' => true
+        //     ], 86400 * 30);
 
-        set_cookie([
-            'name'     => 'access_token',
-            'value'    => $accessToken,
-            'expire'   => $expireIn,
-            'secure'   => false,
-            'httponly' => true,
-            'samesite' => 'Lax',
-        ]);
+        //     set_cookie([
+        //         'name'     => 'access_token',
+        //         'value'    => $accessToken,
+        //         'expire'   => $expireIn,
+        //         'secure'   => false,
+        //         'httponly' => true,
+        //         'samesite' => 'Lax',
+        //     ]);
 
-        set_cookie([
-            'name'     => 'refresh_token',
-            'value'    => $refreshToken,
-            'expire'   => 86400 * 30,
-            'secure'   => false,
-            'httponly' => true,
-            'samesite' => 'Lax',
-        ]);
+        //     set_cookie([
+        //         'name'     => 'refresh_token',
+        //         'value'    => $refreshToken,
+        //         'expire'   => 86400 * 30,
+        //         'secure'   => false,
+        //         'httponly' => true,
+        //         'samesite' => 'Lax',
+        //     ]);
+
+        //     return $this->response->setJSON([
+        //         'status' => 'success',
+        //         'token' => $accessToken,
+        //         'expires_in' => $expireIn
+        //     ]);
+            
+        //     http_response(200);
+        // }
 
         return $this->response->setJSON([
-            'status' => 'success',
-            'token' => $accessToken,
-            'expires_in' => $expireIn
+            'status' => 'error',
+            'message' => 'Invalid credentials',
+            'email_address' => $user['email_address'],
+            'password' => $user['password']
         ]);
-        
-        http_response(200);
+
     }
+
 
     public function login()
     {
