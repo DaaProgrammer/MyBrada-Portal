@@ -48,60 +48,61 @@ if (!$this->validate($rules)) {
 
         $AuthModel = new AuthModel();
         $user = $AuthModel->AuthLogin($email);
+    
         if (!$user) {
             return $this->response->setJSON(['status' => 'error', 'message' => 'User not found']);
             exit;
         }
 
-        // if ($user && password_verify($password, $user['password'])) {
-        //     $expireIn = $remember ? (86400 * 30) : 3600; // 30 days vs 1 hour
+        if ($user && password_verify($password, $user[0]->password)) {
+            $expireIn = $remember ? (86400 * 30) : 3600; // 30 days vs 1 hour
 
-        //     $accessToken = generateJWT([
-        //         'id' => $user['id'],
-        //         'email' => $user['email'],
-        //         'name' => $user['name']
-        //     ], $expireIn);
+            $accessToken = generateJWT([
+                'id' => $user[0]->id,
+                'email' => $user[0]->email_address,
+                'first_name' => $user[0]->first_name,
+                'last_name' => $user[0]->last_name
+            ], $expireIn);
 
 
-        //     $refreshToken = generateJWT([
-        //         'id' => $user['id'],
-        //         'email' => $user['email'],
-        //         'name' => $user['name'],
-        //         'refresh' => true
-        //     ], 86400 * 30);
+            $refreshToken = generateJWT([
+                'id' => $user[0]->id,
+                'email' => $user[0]->email_address,
+                'first_name' => $user[0]->first_name,
+                'last_name' => $user[0]->last_name,
+                'refresh' => true
+            ], 86400 * 30);
 
-        //     set_cookie([
-        //         'name'     => 'access_token',
-        //         'value'    => $accessToken,
-        //         'expire'   => $expireIn,
-        //         'secure'   => false,
-        //         'httponly' => true,
-        //         'samesite' => 'Lax',
-        //     ]);
+            set_cookie([
+                'name'     => 'access_token',
+                'value'    => $accessToken,
+                'expire'   => $expireIn,
+                'secure'   => false,
+                'httponly' => true,
+                'samesite' => 'Lax',
+            ]);
 
-        //     set_cookie([
-        //         'name'     => 'refresh_token',
-        //         'value'    => $refreshToken,
-        //         'expire'   => 86400 * 30,
-        //         'secure'   => false,
-        //         'httponly' => true,
-        //         'samesite' => 'Lax',
-        //     ]);
+            set_cookie([
+                'name'     => 'refresh_token',
+                'value'    => $refreshToken,
+                'expire'   => 86400 * 30,
+                'secure'   => false,
+                'httponly' => true,
+                'samesite' => 'Lax',
+            ]);
 
-        //     return $this->response->setJSON([
-        //         'status' => 'success',
-        //         'token' => $accessToken,
-        //         'expires_in' => $expireIn
-        //     ]);
+            return $this->response->setJSON([
+                'status' => 'success',
+                'token' => $accessToken,
+                'expires_in' => $expireIn
+            ]);
             
-        //     http_response(200);
-        // }
+            http_response(200);
+        }
 
         return $this->response->setJSON([
             'status' => 'error',
-            'message' => 'Invalid credentials',
-            'email_address' => $user['email_address'],
-            'password' => $user['password']
+            'message' => 'Invalid credentials'
         ]);
 
     }
