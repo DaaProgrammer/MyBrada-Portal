@@ -18,5 +18,6 @@ $routes->get('/', 'Auth::index');
 // $routes->get('/', 'Auth::login');
 $routes->get('login', 'Auth::login');
 $routes->post('attemptLogin', 'Auth::attemptLogin');
+$routes->get('logout', 'Auth::logout');
 
 

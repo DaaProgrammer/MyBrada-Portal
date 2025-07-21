@@ -9,6 +9,7 @@ use Firebase\JWT\Key;
 use App\Libraries\SupabaseService;
 
 helper('jwt');
+helper('cookie');
 
 class Auth extends BaseController
 {
@@ -35,12 +36,12 @@ class Auth extends BaseController
             'password' => 'required|min_length[6]'
         ];
 
-if (!$this->validate($rules)) {
-    return $this->response->setJSON([
-        'status' => 'error',
-        'errors' => $this->validator->getErrors()
-    ])->setStatusCode(422);
-}
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
 
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
@@ -115,13 +116,15 @@ if (!$this->validate($rules)) {
 
     public function logout()
     {
-        // Remove the cookies
         helper('cookie');
-        delete_cookie('access_token');
-        delete_cookie('refresh_token');
-
+        setcookie('access_token', '', time() - 3600, '/', '', false, true);
+        setcookie('refresh_token', '', time() - 3600, '/', '', false, true);
+        // Optional: clear cookies from $_COOKIE superglobal
+        unset($_COOKIE['access_token']);
+        unset($_COOKIE['refresh_token']);
         return redirect()->to('/login');
     }
+
 
     public function refreshToken()
     {

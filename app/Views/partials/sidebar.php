@@ -67,6 +67,6 @@
       </ul>
     </div>
     <div class="sidenav-footer mx-3 ">
-      <a class="btn btn-primary btn-sm mb-0 w-100" href="#" type="button" style="color:#000">Sign Out</a>
+      <a class="btn btn-primary btn-sm mb-0 w-100" href="/logout" type="button" style="color:#000">Sign Out</a>
     </div>
   </aside>

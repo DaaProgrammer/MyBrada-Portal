@@ -19,4 +19,5 @@ class SupabaseService
     {
         return $this->service;
     }
+
 }

@@ -194,3 +194,50 @@ in APPPATH\Controllers\Auth.php on line 104.
  6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-21 20:27:37 --> Error: Call to undefined function App\Controllers\unset_cookie()
+[Method: GET, Route: logout]
+in APPPATH\Controllers\Auth.php on line 123.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->logout()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-21 20:28:33 --> ErrorException: Undefined variable $COOKIE
+[Method: GET, Route: logout]
+in APPPATH\Controllers\Auth.php on line 126.
+ 1 APPPATH\Controllers\Auth.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $COOKIE', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Controllers\\Auth.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-21 20:32:00 --> ParseError: syntax error, unexpected token "public"
+[Method: GET, Route: logout]
+in APPPATH\Controllers\Auth.php on line 120.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-21 20:39:26 --> TypeError: CodeIgniter\Cookie\Cookie::validatePrefix(): Argument #1 ($prefix) must be of type string, false given, called in C:\Users\user-pc\Music\Ruined\MyBradaPortal\system\Cookie\Cookie.php on line 232
+[Method: GET, Route: logout]
+in SYSTEMPATH\Cookie\Cookie.php on line 741.
+ 1 SYSTEMPATH\Cookie\Cookie.php(232): CodeIgniter\Cookie\Cookie->validatePrefix(false, true, '/', '/')
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(545): CodeIgniter\Cookie\Cookie->__construct('access_token', '', [...])
+ 3 APPPATH\Controllers\Auth.php(144): CodeIgniter\HTTP\Response->setCookie('access_token', '', 3506257132, '/', '', false, true, 'Lax')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->logout()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
