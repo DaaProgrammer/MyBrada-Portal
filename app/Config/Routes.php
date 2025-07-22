@@ -19,5 +19,6 @@ $routes->get('/', 'Auth::index');
 $routes->get('login', 'Auth::login');
 $routes->post('attemptLogin', 'Auth::attemptLogin');
 $routes->get('logout', 'Auth::logout');
+$routes->post('dashboard', 'Portal::dashboard');
 
 

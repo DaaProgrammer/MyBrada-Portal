@@ -1,0 +1,33 @@
+.dataTables_filter {
+  text-align: left !important;
+  margin: 20px 20px;
+}
+
+li#usersTable_previous {
+    margin-right: 20px;
+    border: none;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: var(--bs-pagination-border-radius);
+    border-bottom-left-radius: var(--bs-pagination-border-radius);
+    border: none !important;
+    color: #F4E77C;
+    font-weight: bold;
+}
+
+li#usersTable_next {
+    margin-left: 10px;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: var(--bs-pagination-border-radius);
+    border-bottom-right-radius: var(--bs-pagination-border-radius);
+    border: none;
+    color: #F4E77C;
+    font-weight: bold;
+}
+
+/* ul.pagination li {
+    margin: 4px !important;
+} */

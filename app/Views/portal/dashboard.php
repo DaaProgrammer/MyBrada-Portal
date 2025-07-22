@@ -93,311 +93,71 @@
               <h6>All Users</h6>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
+
               <div class="table-responsive p-0">
-
-
-                <table class="table align-items-center mb-0">
-                  <thead>
-                    <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">User</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">User Role</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID Number</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Phone Number</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Relationship Status</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Background of Abuse</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Number of Siblings</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Educational Level</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Physical Address</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Date Created</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Actions</th>
-                      <th class="text-secondary opacity-7"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">John Michael</h6>
-                            <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">User</p>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">9807236069080</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">+27659427819</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Single</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">No</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">2</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Degree</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Shakaskraal</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Shakaskraal</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Verified</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <a class="btn btn-link text-white mb-0" href="javascript:;" onclick="blockUser()"><span class="badge badge-sm bg-gradient-danger">Block User</span></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user2">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Alexa Liras</h6>
-                            <p class="text-xs text-secondary mb-0">alexa@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">Dispatcher</p>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">9807236069080</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">+27659427819</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Single</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">No</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">2</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Degree</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Shakaskraal</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Shakaskraal</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-warning">Pending</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <a class="btn btn-link text-white mb-0" href="javascript:;" onclick="blockUser()"><span class="badge badge-sm bg-gradient-danger">Block User</span></a>
-                      </td>
-
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3" alt="user3">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Laurent Perrier</h6>
-                            <p class="text-xs text-secondary mb-0">laurent@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">User</p>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">9807236069080</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">+27659427819</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Single</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">No</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">2</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Degree</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Shakaskraal</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Shakaskraal</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-warning">pending</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <a class="btn btn-link text-white mb-0" href="javascript:;" onclick="blockUser()"><span class="badge badge-sm bg-gradient-danger">Block User</span></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user4">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Michael Levi</h6>
-                            <p class="text-xs text-secondary mb-0">michael@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">User</p>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">9807236069080</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">+27659427819</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Single</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">No</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">2</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Degree</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Shakaskraal</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Shakaskraal</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Verified</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <a class="btn btn-link text-white mb-0" href="javascript:;" onclick="blockUser()"><span class="badge badge-sm bg-gradient-danger">Block User</span></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user5">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Richard Gran</h6>
-                            <p class="text-xs text-secondary mb-0">richard@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">User</p>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">9807236069080</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">+27659427819</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Single</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">No</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">2</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Degree</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Shakaskraal</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Shakaskraal</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Verified</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <a class="btn btn-link text-white mb-0" href="javascript:;" onclick="blockUser()"><span class="badge badge-sm bg-gradient-danger">Block User</span></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3" alt="user6">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Miriam Eric</h6>
-                            <p class="text-xs text-secondary mb-0">miriam@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">User</p>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">9807236069080</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">+27659427819</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Single</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">No</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">2</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Degree</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Shakaskraal</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">Shakaskraal</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Verified</span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <a class="btn btn-link text-white mb-0" href="javascript:;" onclick="blockUser()"><span class="badge badge-sm bg-gradient-danger">Block User</span></a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+<table id="usersTable" class="table align-items-center mb-0 datatables">
+  <thead>
+    <tr>
+      <th class="text-left text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">User</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">User Role</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID Number</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Phone Number</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Relationship Status</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Background of Abuse</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Number of Siblings</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Educational Level</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Physical Address</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Date Created</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach ($allUsers['users'] as $user): ?>
+      <tr>
+        <td>
+          <div class="d-flex px-2 py-1">
+            <div>
+              <img src="<?= $user->profile_image ?: '../assets/img/team-2.jpg' ?>" onerror="this.onerror=null; this.src='../assets/img/team-2.jpg';"  class="avatar avatar-sm me-3" alt="user">
+            </div>
+            <div class="d-flex flex-column justify-content-center">
+              <h6 class="mb-0 text-sm"><?= htmlspecialchars($user->first_name . ' ' . $user->last_name) ?></h6>
+              <p class="text-xs text-secondary mb-0"><?= htmlspecialchars($user->email_address) ?></p>
+            </div>
+          </div>
+        </td>
+        <td><p class="text-secondary text-xs font-weight-bold text-center"><?= htmlspecialchars($user->user_role=='dispatcher' ? 'Responder' : $user->user_role ) ?></p></td>
+        <td class="text-secondary text-xs font-weight-bold text-center"><?= htmlspecialchars($user->id_number ?: 'N/A') ?></td>
+        <td class="text-secondary text-xs font-weight-bold text-center"><?= htmlspecialchars($user->phone_number ?: 'N/A') ?></td>
+        <td class="text-secondary text-xs font-weight-bold text-center"><?= htmlspecialchars($user->relationship_status ?: 'N/A') ?></td>
+        <td class="text-secondary text-xs font-weight-bold text-center"><?= htmlspecialchars($user->background_of_abuse ?: 'N/A') ?></td>
+        <td class="text-secondary text-xs font-weight-bold text-center"><?= htmlspecialchars($user->number_of_siblings ?: 'N/A') ?></td>
+        <td class="text-secondary text-xs font-weight-bold text-center"><?= htmlspecialchars($user->education_level ?: 'N/A') ?></td>
+        <td class="text-secondary text-xs font-weight-bold text-center" style="max-width: 150px; word-break: break-word; white-space: normal;">
+          <?= htmlspecialchars($user->physical_address ?: 'N/A') ?>
+        </td>
+        <td class="text-secondary text-xs font-weight-bold text-center"><?= date('Y-m-d', strtotime($user->date_created)) ?></td>
+        <td class="text-secondary text-xs font-weight-bold text-center text-sm">
+          <?php if (!empty($user->status) && $user->status === 'verified'): ?>
+            <span class="badge badge-sm bg-gradient-success">Verified</span>
+          <?php else: ?>
+            <span class="badge badge-sm bg-gradient-secondary"><?php echo $user->status;?></span>
+          <?php endif; ?>
+        </td>
+        <td class="text-center text-sm">
+          <a class="btn btn-link text-white mb-0" href="javascript:;" onclick="blockUser(<?= $user->id ?>)">
+            <span class="badge badge-sm bg-gradient-danger">Block User</span>
+          </a>
+        </td>
+      </tr>
+    <?php endforeach; ?>
+  </tbody>
+</table>
 
               </div>
-            </div>
+             </div>
           </div>
         </div>
       </div>
 
+      

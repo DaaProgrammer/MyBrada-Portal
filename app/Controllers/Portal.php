@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\DashboardStatsModel;
+use App\Models\AllUsersModel;
 use CodeIgniter\HTTP\ResponseInterface;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
@@ -16,12 +17,18 @@ class Portal extends BaseController
         $DashboardStatsModel = new DashboardStatsModel();
         $dashboardStats['dashboardStats'] = $DashboardStatsModel->DashboardStats();
 
+        $AllUsers = new AllUsersModel();
+        $allUsers = $AllUsers->AllUsers();
+
         $data = [
             'title' => 'MyBrada - Dashboard',
             'showSidebar' => true,
             'activePage' => 'dashboard',
-            'dashboardStats' => $dashboardStats['dashboardStats']
+            'dashboardStats' => $dashboardStats['dashboardStats'],
+            'allUsers' => $allUsers,
         ];
+
+        // print_r($allUsers);
         echo view('partials/header', $data);
         echo view('portal/dashboard', $data);
         echo view('partials/footer');
