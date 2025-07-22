@@ -13,13 +13,6 @@ helper('cookie');
 
 class Auth extends BaseController
 {
-    protected $supabase;
-
-    public function __construct()
-    {
-        $this->supabase = new SupabaseService();
-    }
-
     public function index(): string
     {
         return view('auth/login');

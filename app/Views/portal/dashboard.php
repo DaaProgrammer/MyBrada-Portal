@@ -7,7 +7,7 @@
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Total <br/>Users</p>
                     <h5 class="font-weight-bolder">
-                      62
+                      <?= $dashboardStats['users_counter']; ?>
                     </h5>
                   </div>
                 </div>
@@ -28,7 +28,7 @@
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Total <br/>Responders</p>
                     <h5 class="font-weight-bolder">
-                      10
+                      <?= $dashboardStats['responders_counter']; ?>
                     </h5>
                   </div>
                 </div>
@@ -49,7 +49,7 @@
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Open <br/>Alerts</p>
                     <h5 class="font-weight-bolder">
-                      2
+                      <?= $dashboardStats['open_alerts_counter']; ?>
                     </h5>
                   </div>
                 </div>
@@ -70,7 +70,7 @@
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Support <br/>Requests</p>
                     <h5 class="font-weight-bolder">
-                      17
+                      <?= $dashboardStats['unassigned_support_requests_counter']; ?>
                     </h5>
                   </div>
                 </div>

@@ -1,16 +1,29 @@
 <?php
 namespace App\Controllers;
+use App\Models\DashboardStatsModel;
+use CodeIgniter\HTTP\ResponseInterface;
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+use App\Libraries\SupabaseService;
+
+helper('jwt');
+helper('cookie');
 
 class Portal extends BaseController
 {
     public function dashboard() { 
+
+        $DashboardStatsModel = new DashboardStatsModel();
+        $dashboardStats['dashboardStats'] = $DashboardStatsModel->DashboardStats();
+
         $data = [
             'title' => 'MyBrada - Dashboard',
             'showSidebar' => true,
-            'activePage' => 'dashboard'
+            'activePage' => 'dashboard',
+            'dashboardStats' => $dashboardStats['dashboardStats']
         ];
         echo view('partials/header', $data);
-        echo view('portal/dashboard');
+        echo view('portal/dashboard', $data);
         echo view('partials/footer');
     }
 

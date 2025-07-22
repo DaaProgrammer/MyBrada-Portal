@@ -1,0 +1,85 @@
+CRITICAL - 2025-07-22 19:14:41 --> Error: Class "App\Models\DashboardStatsModel" not found
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Portal.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-22 19:18:39 --> ErrorException: Undefined variable $data
+[Method: GET, Route: dashboard]
+in APPPATH\Views\portal\dashboard.php on line 10.
+ 1 APPPATH\Views\portal\dashboard.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\dashboard.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/dashboard', [], true)
+ 5 APPPATH\Controllers\Portal.php(26): view('portal/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-22 19:20:29 --> ErrorException: Undefined variable $data
+[Method: GET, Route: dashboard]
+in APPPATH\Views\portal\dashboard.php on line 10.
+ 1 APPPATH\Views\portal\dashboard.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\dashboard.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/dashboard', [], true)
+ 5 APPPATH\Controllers\Portal.php(26): view('portal/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-22 19:21:38 --> ErrorException: Array to string conversion
+[Method: GET, Route: dashboard]
+in APPPATH\Views\portal\dashboard.php on line 10.
+ 1 APPPATH\Views\portal\dashboard.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\dashboard.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/dashboard', [], true)
+ 5 APPPATH\Controllers\Portal.php(26): view('portal/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-22 19:21:50 --> ErrorException: Undefined array key 0
+[Method: GET, Route: dashboard]
+in APPPATH\Views\portal\dashboard.php on line 10.
+ 1 APPPATH\Views\portal\dashboard.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\dashboard.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/dashboard', [], true)
+ 5 APPPATH\Controllers\Portal.php(26): view('portal/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-22 19:22:08 --> ErrorException: Undefined array key "user_counter"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\portal\dashboard.php on line 10.
+ 1 APPPATH\Views\portal\dashboard.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_counter"', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\dashboard.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/dashboard', [], true)
+ 5 APPPATH\Controllers\Portal.php(26): view('portal/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
