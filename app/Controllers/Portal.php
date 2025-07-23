@@ -7,6 +7,7 @@ use App\Models\NewsfeedModel;
 use App\Models\AlertsModel;
 use App\Models\NoticesModel;
 use App\Models\ProfessionalSupportModel;
+use App\Models\personalDiaryModel;
 use CodeIgniter\HTTP\ResponseInterface;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
@@ -111,27 +112,37 @@ class Portal extends BaseController
 
 
     public function professionalSupport() {
-        $ProfessionalSupport = new ProfessionalSupportModel();
-        $ProfessionalSupport = $ProfessionalSupport->AllProfessionalSupport();
+        $professionalSupportModel = new ProfessionalSupportModel();
+        $professionalSupport = $professionalSupportModel->AllProfessionalSupport();
+        $professionals = $professionalSupportModel->AllProfessionals();
 
         $data = [
             'title' => 'MyBrada - Professional Support',
             'showSidebar' => true,
-            'activePage' => 'professional_support'
+            'activePage' => 'professional_support',
+            'professionalSupport' => $professionalSupport,
+            'professionals' => $professionals
         ];
+
+        
         echo view('partials/header', $data);
-        echo view('portal/professional_support', $ProfessionalSupport);
+        echo view('portal/professional_support', $data);
         echo view('partials/footer');
     }
 
-    public function personalDairy() {
+    public function PersonalDiary() {
+        $personalDiaryModel = new personalDiaryModel();
+        $personalDiary = $personalDiaryModel->PersonalDiary();
+
         $data = [
             'title' => 'MyBrada - Personal Dairy',
             'showSidebar' => true,
-            'activePage' => 'personal_diary'
+            'activePage' => 'personal_diary',
+            'personalDiary' => $personalDiary['diary']
         ];
+
         echo view('partials/header', $data);
-        echo view('portal/personal_diary');
+        echo view('portal/personal_diary', $data);
         echo view('partials/footer');
     }
 }

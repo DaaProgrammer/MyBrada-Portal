@@ -836,3 +836,307 @@ CRITICAL - 2025-07-23 12:17:48 --> ErrorException: Maximum execution time of 30 
 [Method: GET, Route: alerts]
 in VENDORPATH\guzzlehttp\guzzle\src\Handler\StreamHandler.php on line 337.
  1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 12:33:13 --> ErrorException: Undefined variable $professionalSupport
+[Method: GET, Route: professional_support]
+in APPPATH\Views\portal\professional_support.php on line 9.
+ 1 APPPATH\Views\portal\professional_support.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $professionalSupport', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php', 9)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/professional_support', [], true)
+ 5 APPPATH\Controllers\Portal.php(127): view('portal/professional_support', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:33:27 --> ErrorException: Undefined variable $professionalSupport
+[Method: GET, Route: professional_support]
+in APPPATH\Views\portal\professional_support.php on line 9.
+ 1 APPPATH\Views\portal\professional_support.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $professionalSupport', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php', 9)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/professional_support', [], true)
+ 5 APPPATH\Controllers\Portal.php(127): view('portal/professional_support', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:36:01 --> ErrorException: Undefined variable $Professionals
+[Method: GET, Route: professional_support]
+in APPPATH\Controllers\Portal.php on line 116.
+ 1 APPPATH\Controllers\Portal.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Professionals', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Controllers\\Portal.php', 116)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:36:18 --> ErrorException: Undefined variable $Professionals
+[Method: GET, Route: professional_support]
+in APPPATH\Controllers\Portal.php on line 116.
+ 1 APPPATH\Controllers\Portal.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Professionals', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Controllers\\Portal.php', 116)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:38:43 --> ErrorException: Attempt to read property "mybrada_users" on array
+[Method: GET, Route: professional_support]
+in APPPATH\Views\portal\professional_support.php on line 33.
+ 1 APPPATH\Views\portal\professional_support.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mybrada_users" on array', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php', 33)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/professional_support', [], true)
+ 5 APPPATH\Controllers\Portal.php(128): view('portal/professional_support', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:38:50 --> ErrorException: Attempt to read property "mybrada_users" on array
+[Method: GET, Route: professional_support]
+in APPPATH\Views\portal\professional_support.php on line 119.
+ 1 APPPATH\Views\portal\professional_support.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mybrada_users" on array', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php', 119)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/professional_support', [], true)
+ 5 APPPATH\Controllers\Portal.php(128): view('portal/professional_support', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:39:43 --> ErrorException: Undefined property: stdClass::$mybrada_users
+[Method: GET, Route: professional_support]
+in APPPATH\Views\portal\professional_support.php on line 119.
+ 1 APPPATH\Views\portal\professional_support.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$mybrada_users', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php', 119)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/professional_support', [], true)
+ 5 APPPATH\Controllers\Portal.php(128): view('portal/professional_support', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:41:10 --> ErrorException: Undefined property: stdClass::$mybrada_users
+[Method: GET, Route: professional_support]
+in APPPATH\Views\portal\professional_support.php on line 119.
+ 1 APPPATH\Views\portal\professional_support.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$mybrada_users', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php', 119)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/professional_support', [], true)
+ 5 APPPATH\Controllers\Portal.php(128): view('portal/professional_support', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:41:58 --> ErrorException: Undefined property: stdClass::$professional_number
+[Method: GET, Route: professional_support]
+in APPPATH\Views\portal\professional_support.php on line 129.
+ 1 APPPATH\Views\portal\professional_support.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$professional_number', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php', 129)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/professional_support', [], true)
+ 5 APPPATH\Controllers\Portal.php(128): view('portal/professional_support', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:42:15 --> ErrorException: Undefined property: stdClass::$status
+[Method: GET, Route: professional_support]
+in APPPATH\Views\portal\professional_support.php on line 139.
+ 1 APPPATH\Views\portal\professional_support.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$status', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php', 139)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\professional_support.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/professional_support', [], true)
+ 5 APPPATH\Controllers\Portal.php(128): view('portal/professional_support', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:53:32 --> Error: Class "App\Models\personalDiaryModelModel" not found
+[Method: POST, Route: personal_diary]
+in APPPATH\Controllers\Portal.php on line 134.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->PersonalDiary()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 13:45:59 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 13:50:50 --> ErrorException: Undefined variable $personalDiary
+[Method: GET, Route: personal_diary]
+in APPPATH\Views\portal\personal_diary.php on line 11.
+ 1 APPPATH\Views\portal\personal_diary.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personalDiary', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/personal_diary', [], true)
+ 5 APPPATH\Controllers\Portal.php(144): view('portal/personal_diary', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->PersonalDiary()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 13:57:11 --> ErrorException: Attempt to read property "title" on array
+[Method: GET, Route: personal_diary]
+in APPPATH\Views\portal\personal_diary.php on line 38.
+ 1 APPPATH\Views\portal\personal_diary.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/personal_diary', [], true)
+ 5 APPPATH\Controllers\Portal.php(145): view('portal/personal_diary', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->PersonalDiary()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 13:58:35 --> ErrorException: Undefined array key "personalDiary"
+[Method: GET, Route: personal_diary]
+in APPPATH\Views\portal\personal_diary.php on line 24.
+ 1 APPPATH\Views\portal\personal_diary.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "personalDiary"', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/personal_diary', [], true)
+ 5 APPPATH\Controllers\Portal.php(145): view('portal/personal_diary', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->PersonalDiary()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 13:58:42 --> ErrorException: Undefined variable $data
+[Method: GET, Route: personal_diary]
+in APPPATH\Views\portal\personal_diary.php on line 24.
+ 1 APPPATH\Views\portal\personal_diary.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/personal_diary', [], true)
+ 5 APPPATH\Controllers\Portal.php(145): view('portal/personal_diary', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->PersonalDiary()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 13:59:38 --> ErrorException: Attempt to read property "title" on array
+[Method: GET, Route: personal_diary]
+in APPPATH\Views\portal\personal_diary.php on line 38.
+ 1 APPPATH\Views\portal\personal_diary.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/personal_diary', [], true)
+ 5 APPPATH\Controllers\Portal.php(145): view('portal/personal_diary', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->PersonalDiary()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:02:46 --> Error: Call to undefined function print_r_r()
+[Method: GET, Route: personal_diary]
+in APPPATH\Views\portal\personal_diary.php on line 12.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/personal_diary', [], true)
+ 4 APPPATH\Controllers\Portal.php(145): view('portal/personal_diary', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->PersonalDiary()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:02:54 --> ErrorException: Undefined array key "personalDiary"
+[Method: GET, Route: personal_diary]
+in APPPATH\Views\portal\personal_diary.php on line 12.
+ 1 APPPATH\Views\portal\personal_diary.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "personalDiary"', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/personal_diary', [], true)
+ 5 APPPATH\Controllers\Portal.php(145): view('portal/personal_diary', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->PersonalDiary()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:15:39 --> ErrorException: Attempt to read property "title" on array
+[Method: GET, Route: personal_diary]
+in APPPATH\Views\portal\personal_diary.php on line 38.
+ 1 APPPATH\Views\portal\personal_diary.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\personal_diary.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/personal_diary', [], true)
+ 5 APPPATH\Controllers\Portal.php(145): view('portal/personal_diary', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->PersonalDiary()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:21:44 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:21:45 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')

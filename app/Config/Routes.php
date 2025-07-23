@@ -12,7 +12,7 @@ $routes->group('', ['filter' => 'jwt'], function($routes) {
     $routes->get('alerts', 'Portal::alerts');
     $routes->get('notices', 'Portal::notices');
     $routes->get('professional_support', 'Portal::professionalSupport');
-    $routes->get('personal_diary', 'Portal::personalDairy');
+    $routes->get('personal_diary', 'Portal::PersonalDiary');
 });
 $routes->get('/', 'Auth::index');
 // $routes->get('/', 'Auth::login');
@@ -25,5 +25,6 @@ $routes->post('newsfeeds', 'Portal::newsfeeds');
 $routes->post('alerts', 'Portal::alerts');
 $routes->post('notices', 'Portal::notices');
 $routes->post('professional_support', 'Portal::professionalSupport');
+$routes->post('personal_diary', 'Portal::PersonalDiary');
 
 

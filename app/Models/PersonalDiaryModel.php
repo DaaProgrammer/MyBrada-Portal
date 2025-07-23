@@ -4,7 +4,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 use PHPSupabase\Service;
 
-class ProfessionalSupportModel extends Model
+class PersonalDiaryModel extends Model
 {
     protected $service;
 
@@ -27,14 +27,14 @@ class ProfessionalSupportModel extends Model
 
     }
 
-    public function AllProfessionalSupport()
+    public function PersonalDiary()
     {
 
-        $db = $this->service->initializeDatabase('mybrada_support', 'uid');
+        $db = $this->service->initializeDatabase('mybrada_diary', 'uid');
 
         $query = [
             'select' => '*',
-            'from'   => 'mybrada_support',
+            'from'   => 'mybrada_diary',
             'join'   => [
                 [
                     'table' => 'mybrada_users',
@@ -44,39 +44,14 @@ class ProfessionalSupportModel extends Model
         ];
 
         try{
-            $professionalSupport = $db->createCustomQuery($query)->getResult();
+            $diary = $db->createCustomQuery($query)->getResult();
         }
         catch(Exception $e){
             echo $e->getMessage();
         }
 
         return [
-            'professionalSupport' => $professionalSupport
+            'diary' => $diary
         ];
     }
-
-
-
-    public function AllProfessionals()
-    {
-
-        $db = $this->service->initializeDatabase('mybrada_professionals', 'id');
-
-        $query = [
-            'select' => '*',
-            'from'   => 'mybrada_professionals',
-        ];
-
-        try{
-            $professionals = $db->createCustomQuery($query)->getResult();
-        }
-        catch(Exception $e){
-            echo $e->getMessage();
-        }
-
-        return [
-            'professionals' => $professionals
-        ];
-    }
-
 }
