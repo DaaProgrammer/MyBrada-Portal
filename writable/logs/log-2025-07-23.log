@@ -1,0 +1,838 @@
+CRITICAL - 2025-07-23 09:03:33 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:04:21 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: GET, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Handler\StreamHandler.php on line 337.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 09:06:13 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: POST, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Handler\StreamHandler.php on line 337.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 09:34:45 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:35:14 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:35:17 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:37:47 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:38:10 --> ErrorException: Undefined property: stdClass::$first_name
+[Method: POST, Route: alerts]
+in APPPATH\Views\portal\alerts.php on line 30.
+ 1 APPPATH\Views\portal\alerts.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$first_name', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\alerts.php', 30)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\alerts.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/alerts', [], true)
+ 5 APPPATH\Controllers\Portal.php(88): view('portal/alerts')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:39:07 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(49): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:39:45 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(49): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:40:44 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(49): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:41:26 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(53): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:41:28 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(53): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:41:44 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(49): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:43:41 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(49): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:43:43 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(49): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:45:08 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: GET, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(49): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:45:49 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:45:56 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:46:27 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:47:20 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(50): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:47:25 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(50): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:48:12 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:48:50 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:49:35 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:49:49 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:52:30 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(47): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:52:35 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 09:52:38 --> TypeError: PHPSupabase\QueryBuilder::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php on line 42.
+ 1 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->getResult()
+ 2 APPPATH\Models\AlertsModel.php(48): PHPSupabase\Database->createCustomQuery([...])
+ 3 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:08:57 --> GuzzleHttp\Exception\ClientException: Client error: `GET https://mgyctnjktrnjfbixmdqd.supabase.co/rest/v1/mybrada_alerts?select=*,mybrada_alerts(id,%20*)` resulted in a `400 Bad Request` response:
+{"code":"PGRST200","details":"Searched for a foreign key relationship between 'mybrada_alerts' and 'mybrada_alerts' in t (truncated...)
+
+[Method: POST, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 111.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::{closure:{closure:{closure:GuzzleHttp\Middleware::httpErrors():60}:61}:67}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::{closure:GuzzleHttp\Promise\Promise::settle():156}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(189): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\rafaelwendel\phpsupabase\src\Service.php(225): GuzzleHttp\Client->request('GET', 'https://mgyctnjktrnjfbixmdqd.supabase.co:443/rest/v1/mybrada_alerts?select=*,mybrada_alerts(id, *)', [...])
+12 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(87): PHPSupabase\Service->executeHttpRequest('GET', 'https://mgyctnjktrnjfbixmdqd.supabase.co:443/rest/v1/mybrada_alerts?select=*,mybrada_alerts(id, *)', [...])
+13 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(194): PHPSupabase\Database->executeQuery('select=*,mybrada_alerts(id, *)')
+14 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->join('mybrada_alerts', 'id')
+15 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+16 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+17 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+18 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:09:10 --> GuzzleHttp\Exception\ClientException: Client error: `GET https://mgyctnjktrnjfbixmdqd.supabase.co/rest/v1/mybrada_alerts?select=*,mybrada_userss(id,%20*)` resulted in a `400 Bad Request` response:
+{"code":"PGRST200","details":"Searched for a foreign key relationship between 'mybrada_alerts' and 'mybrada_userss' in t (truncated...)
+
+[Method: POST, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 111.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::{closure:{closure:{closure:GuzzleHttp\Middleware::httpErrors():60}:61}:67}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::{closure:GuzzleHttp\Promise\Promise::settle():156}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(189): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\rafaelwendel\phpsupabase\src\Service.php(225): GuzzleHttp\Client->request('GET', 'https://mgyctnjktrnjfbixmdqd.supabase.co:443/rest/v1/mybrada_alerts?select=*,mybrada_userss(id, *)', [...])
+12 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(87): PHPSupabase\Service->executeHttpRequest('GET', 'https://mgyctnjktrnjfbixmdqd.supabase.co:443/rest/v1/mybrada_alerts?select=*,mybrada_userss(id, *)', [...])
+13 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(194): PHPSupabase\Database->executeQuery('select=*,mybrada_userss(id, *)')
+14 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->join('mybrada_userss', 'id')
+15 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+16 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+17 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+18 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:09:23 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:10:06 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:10:10 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:10:22 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:11:53 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(37): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:18:40 --> TypeError: PHPSupabase\Database::findBy(): Argument #2 ($value) must be of type string, null given, called in C:\Users\user-pc\Music\Ruined\MyBradaPortal\app\Models\AlertsModel.php on line 47
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 166.
+ 1 APPPATH\Models\AlertsModel.php(47): PHPSupabase\Database->findBy('id', null)
+ 2 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:21:12 --> ErrorException: Undefined variable $users
+[Method: POST, Route: alerts]
+in APPPATH\Models\AlertsModel.php on line 59.
+ 1 APPPATH\Models\AlertsModel.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Models\\AlertsModel.php', 59)
+ 2 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:43:50 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: POST, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Handler\StreamHandler.php on line 337.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 10:44:34 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: POST, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Handler\StreamHandler.php on line 337.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 10:47:25 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: POST, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Handler\StreamHandler.php on line 337.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 10:47:59 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: POST, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Handler\StreamHandler.php on line 337.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 10:48:45 --> ParseError: Unclosed '{' on line 8
+[Method: POST, Route: alerts]
+in APPPATH\Models\AlertsModel.php on line 83.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Models\\AlertsModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AlertsModel')
+ 3 APPPATH\Controllers\Portal.php(77): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AlertsModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:48:48 --> ParseError: Unclosed '{' on line 8
+[Method: POST, Route: alerts]
+in APPPATH\Models\AlertsModel.php on line 83.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Models\\AlertsModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AlertsModel')
+ 3 APPPATH\Controllers\Portal.php(77): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AlertsModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:49:04 --> Error: Call to undefined method PHPSupabase\Database::findIn()
+[Method: POST, Route: alerts]
+in APPPATH\Models\AlertsModel.php on line 63.
+ 1 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:49:31 --> TypeError: PHPSupabase\Database::findBy(): Argument #2 ($value) must be of type string, array given, called in C:\Users\user-pc\Music\Ruined\MyBradaPortal\app\Models\AlertsModel.php on line 63
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 166.
+ 1 APPPATH\Models\AlertsModel.php(63): PHPSupabase\Database->findBy('id', [...])
+ 2 APPPATH\Controllers\Portal.php(78): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:50:50 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: POST, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Handler\StreamHandler.php on line 337.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 10:51:24 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: POST, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Handler\StreamHandler.php on line 337.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 10:52:32 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: POST, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Handler\StreamHandler.php on line 337.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 10:53:39 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:53:39 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:55:50 --> Error: Class "App\Controllers\NoticesModel" not found
+[Method: POST, Route: notices]
+in APPPATH\Controllers\Portal.php on line 97.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:56:11 --> Error: Class "App\Controllers\NoticesModel" not found
+[Method: POST, Route: notices]
+in APPPATH\Controllers\Portal.php on line 97.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 10:56:38 --> GuzzleHttp\Exception\ClientException: Client error: `GET https://mgyctnjktrnjfbixmdqd.supabase.co/rest/v1/mybrada_notices?select=*` resulted in a `404 Not Found` response:
+{"code":"42P01","details":null,"hint":null,"message":"relation \"public.mybrada_notices\" does not exist"}
+
+[Method: POST, Route: notices]
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 111.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::{closure:{closure:{closure:GuzzleHttp\Middleware::httpErrors():60}:61}:67}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::{closure:GuzzleHttp\Promise\Promise::settle():156}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(189): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\rafaelwendel\phpsupabase\src\Service.php(225): GuzzleHttp\Client->request('GET', 'https://mgyctnjktrnjfbixmdqd.supabase.co:443/rest/v1/mybrada_notices?select=*', [...])
+12 VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php(208): PHPSupabase\Service->executeHttpRequest('GET', 'https://mgyctnjktrnjfbixmdqd.supabase.co:443/rest/v1/mybrada_notices?select=*', [...])
+13 VENDORPATH\rafaelwendel\phpsupabase\src\QueryBuilder.php(192): PHPSupabase\QueryBuilder->executeQuery('select=*')
+14 VENDORPATH\rafaelwendel\phpsupabase\src\Database.php(260): PHPSupabase\QueryBuilder->execute()
+15 APPPATH\Models\NoticesModel.php(41): PHPSupabase\Database->createCustomQuery([...])
+16 APPPATH\Controllers\Portal.php(98): App\Models\NoticesModel->AllNotices()
+17 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+18 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+19 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+20 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+21 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+22 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+23 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 11:02:59 --> ErrorException: Attempt to read property "mybrada_users" on array
+[Method: GET, Route: notices]
+in APPPATH\Views\portal\notices.php on line 37.
+ 1 APPPATH\Views\portal\notices.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mybrada_users" on array', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/notices', [], true)
+ 5 APPPATH\Controllers\Portal.php(108): view('portal/notices', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 11:04:49 --> ErrorException: Attempt to read property "mybrada_users" on array
+[Method: GET, Route: notices]
+in APPPATH\Views\portal\notices.php on line 38.
+ 1 APPPATH\Views\portal\notices.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mybrada_users" on array', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/notices', [], true)
+ 5 APPPATH\Controllers\Portal.php(108): view('portal/notices', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 11:05:01 --> ErrorException: Attempt to read property "notice_title" on array
+[Method: GET, Route: notices]
+in APPPATH\Views\portal\notices.php on line 42.
+ 1 APPPATH\Views\portal\notices.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "notice_title" on array', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php', 42)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/notices', [], true)
+ 5 APPPATH\Controllers\Portal.php(108): view('portal/notices', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 11:05:55 --> ErrorException: Attempt to read property "mybrada_users" on array
+[Method: GET, Route: notices]
+in APPPATH\Views\portal\notices.php on line 37.
+ 1 APPPATH\Views\portal\notices.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mybrada_users" on array', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/notices', [], true)
+ 5 APPPATH\Controllers\Portal.php(108): view('portal/notices', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 11:07:30 --> ErrorException: Undefined array key "mybrada_users"
+[Method: GET, Route: notices]
+in APPPATH\Views\portal\notices.php on line 37.
+ 1 APPPATH\Views\portal\notices.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "mybrada_users"', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/notices', [], true)
+ 5 APPPATH\Controllers\Portal.php(108): view('portal/notices', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 11:09:01 --> ErrorException: Undefined array key "mybrada_users"
+[Method: GET, Route: notices]
+in APPPATH\Views\portal\notices.php on line 37.
+ 1 APPPATH\Views\portal\notices.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "mybrada_users"', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/notices', [], true)
+ 5 APPPATH\Controllers\Portal.php(108): view('portal/notices', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 11:09:25 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: notices]
+in APPPATH\Views\portal\notices.php on line 37.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/notices', [], true)
+ 4 APPPATH\Controllers\Portal.php(108): view('portal/notices', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 11:09:31 --> ErrorException: Undefined array key "mybrada_users"
+[Method: GET, Route: notices]
+in APPPATH\Views\portal\notices.php on line 37.
+ 1 APPPATH\Views\portal\notices.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "mybrada_users"', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/notices', [], true)
+ 5 APPPATH\Controllers\Portal.php(108): view('portal/notices', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 11:10:30 --> ErrorException: Attempt to read property "notice_title" on array
+[Method: GET, Route: notices]
+in APPPATH\Views\portal\notices.php on line 50.
+ 1 APPPATH\Views\portal\notices.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "notice_title" on array', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php', 50)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/notices', [], true)
+ 5 APPPATH\Controllers\Portal.php(108): view('portal/notices', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 11:11:29 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: notices]
+in APPPATH\Views\portal\notices.php on line 63.
+ 1 APPPATH\Views\portal\notices.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php', 63)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\notices.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/notices', [], true)
+ 5 APPPATH\Controllers\Portal.php(108): view('portal/notices', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->notices()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:06:50 --> Error: Class "App\Controllers\ProfessionalSupportModel" not found
+[Method: POST, Route: professional_spport]
+in APPPATH\Controllers\Portal.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:07:08 --> Error: Class "App\Controllers\ProfessionalSupportModel" not found
+[Method: POST, Route: professional_spport]
+in APPPATH\Controllers\Portal.php on line 114.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:07:09 --> Error: Class "App\Controllers\ProfessionalSupportModel" not found
+[Method: POST, Route: professional_spport]
+in APPPATH\Controllers\Portal.php on line 114.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->professionalSupport()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:14:57 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 12:17:48 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: GET, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Handler\StreamHandler.php on line 337.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

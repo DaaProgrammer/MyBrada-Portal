@@ -20,5 +20,10 @@ $routes->get('login', 'Auth::login');
 $routes->post('attemptLogin', 'Auth::attemptLogin');
 $routes->get('logout', 'Auth::logout');
 $routes->post('dashboard', 'Portal::dashboard');
+$routes->post('responders', 'Portal::responders');
+$routes->post('newsfeeds', 'Portal::newsfeeds');
+$routes->post('alerts', 'Portal::alerts');
+$routes->post('notices', 'Portal::notices');
+$routes->post('professional_support', 'Portal::professionalSupport');
 
 

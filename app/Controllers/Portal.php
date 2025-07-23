@@ -2,6 +2,11 @@
 namespace App\Controllers;
 use App\Models\DashboardStatsModel;
 use App\Models\AllUsersModel;
+use App\Models\AllRespondersModel;
+use App\Models\NewsfeedModel;
+use App\Models\AlertsModel;
+use App\Models\NoticesModel;
+use App\Models\ProfessionalSupportModel;
 use CodeIgniter\HTTP\ResponseInterface;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
@@ -36,61 +41,86 @@ class Portal extends BaseController
 
 
     public function responders() { 
+
+        $AllResponders = new AllRespondersModel();
+        $AllResponders = $AllResponders->AllResponders();
+
         $data = [
             'title' => 'MyBrada - Responders',
             'showSidebar' => true,
-            'activePage' => 'responders'
+            'activePage' => 'responders',
+            'allResponders' => $AllResponders,
         ];
+
         echo view('partials/header', $data);
-        echo view('portal/responders');
+        echo view('portal/responders', $data);
         echo view('partials/footer');
     }
 
 
     public function newsfeeds() { 
+        $Newsfeed = new NewsfeedModel();
+        $Newsfeed = $Newsfeed->Newsfeed();
+
         $data = [
             'title' => 'MyBrada - Newsfeeds',
             'showSidebar' => true,
-            'activePage' => 'newsfeeds'
+            'activePage' => 'newsfeeds',
+            'newsfeed' => $Newsfeed,
         ];
+
         echo view('partials/header', $data);
-        echo view('portal/newsfeeds');
+        echo view('portal/newsfeeds',  $data);
         echo view('partials/footer');
     }
 
 
     public function alerts() { 
-        $data = [
-            'title' => 'MyBrada - Alerts',
-            'showSidebar' => true,
-            'activePage' => 'alerts'
-        ];
-        echo view('partials/header', $data);
-        echo view('portal/alerts');
-        echo view('partials/footer');
+        $Alerts = new AlertsModel();
+        $Alerts = $Alerts->AllAlerts();
+
+        print_r($Alerts);
+
+        // $data = [
+        //     'title' => 'MyBrada - Alerts',
+        //     'showSidebar' => true,
+        //     'activePage' => 'alerts',
+        //     'alerts' => $Alerts,
+        // ];
+
+        // echo view('partials/header', $data);
+        // echo view('portal/alerts');
+        // echo view('partials/footer');
     }
 
     
     public function notices() {
+        $Notices = new NoticesModel();
+        $Notices = $Notices->AllNotices();
+
+
         $data = [
             'title' => 'MyBrada - Notices',
             'showSidebar' => true,
             'activePage' => 'notices'
         ];
         echo view('partials/header', $data);
-        echo view('portal/notices');
+        echo view('portal/notices', $Notices);
         echo view('partials/footer');
     }
 
 
     public function professionalSupport() {
+        $ProfessionalSupport = new ProfessionalSupportModel();
+        $ProfessionalSupport = $ProfessionalSupport->AllProfessionalSupport();
+
         $data = [
             'title' => 'MyBrada - Professional Support',
             'showSidebar' => true,
             'activePage' => 'professional_support'
         ];
         echo view('partials/header', $data);
-        echo view('portal/professional_support');
+        echo view('portal/professional_support', $ProfessionalSupport);
         echo view('partials/footer');
     }
 

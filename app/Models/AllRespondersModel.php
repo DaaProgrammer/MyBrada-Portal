@@ -4,7 +4,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 use PHPSupabase\Service;
 
-class AllUsersModel extends Model
+class AllRespondersModel extends Model
 {
     protected $service;
 
@@ -14,8 +14,6 @@ class AllUsersModel extends Model
 
         $supabaseUrl = getenv('SUPABASE_URL');
         $supabaseKey = getenv('SUPABASE_API_KEY');
-
-        // $this->service = new Service($supabaseKey, $supabaseUrl);
 
         if (!$supabaseUrl || !$supabaseKey) {
             log_message('error', 'Supabase credentials missing in .env');
@@ -29,7 +27,7 @@ class AllUsersModel extends Model
 
     }
 
-    public function AllUsers()
+    public function AllResponders()
     {
 
         $db = $this->service->initializeDatabase('mybrada_users', 'id');
@@ -37,21 +35,27 @@ class AllUsersModel extends Model
         $query = [
             'select' => '*',
             'from'   => 'mybrada_users',
+            'join'   => [
+                [
+                    'table' => 'mybrada_dispatcher',
+                    'tablekey' => 'uid'
+                ]
+            ],
             'where' => 
             [
-                'user_role' => 'neq.admin'
+                'user_role' => 'eq.dispatcher'
             ]
         ];
 
         try{
-            $users = $db->createCustomQuery($query)->getResult();
+            $responders = $db->createCustomQuery($query)->getResult();
         }
         catch(Exception $e){
             echo $e->getMessage();
         }
 
         return [
-            'users' => $users
+            'responders' => $responders
         ];
     }
 }

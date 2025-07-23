@@ -4,7 +4,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 use PHPSupabase\Service;
 
-class AllUsersModel extends Model
+class NewsfeedModel extends Model
 {
     protected $service;
 
@@ -29,29 +29,25 @@ class AllUsersModel extends Model
 
     }
 
-    public function AllUsers()
+    public function Newsfeed()
     {
 
-        $db = $this->service->initializeDatabase('mybrada_users', 'id');
+        $db = $this->service->initializeDatabase('mybrada_newsfeed', 'id');
 
         $query = [
             'select' => '*',
-            'from'   => 'mybrada_users',
-            'where' => 
-            [
-                'user_role' => 'neq.admin'
-            ]
+            'from'   => 'mybrada_newsfeed',
         ];
 
         try{
-            $users = $db->createCustomQuery($query)->getResult();
+            $newsfeed = $db->createCustomQuery($query)->getResult();
         }
         catch(Exception $e){
             echo $e->getMessage();
         }
 
         return [
-            'users' => $users
+            'newsfeed' => $newsfeed
         ];
     }
 }
