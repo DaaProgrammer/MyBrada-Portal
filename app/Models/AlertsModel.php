@@ -34,21 +34,19 @@ class AlertsModel extends Model
         $db = $this->service->initializeDatabase('mybrada_alerts', 'uid');
 
         try {
-            $alerts = $db->fetchAll()->getResult(); 
+            // $alerts = $db->fetchAll()->getResult(); 
+            $alerts = $db->join('mybrada_users', 'id')->getResult();
         } catch (Exception $e) {
             echo "<p>Error fetching alerts or users: {$e->getMessage()}</p>";
         }
 
-            $dbUser = $this->service->initializeDatabase('mybrada_users', 'id');
+
         foreach ($alerts as &$alert) {
             if (!empty($alert->responder_uid) && $alert->responder_uid != 0) {
-
+                $dbUser = $this->service->initializeDatabase('mybrada_users', 'id');
                 try {
                     $users = $dbUser->findBy('id', $alert->responder_uid)->getResult();
                     $alert->responder_details = $users[0] ?? null;
-
-                    // $users = $dbUser->findBy('id', $alert->uid)->getResult();
-                    // $alert->user_details = $users[0] ?? null;
 
                 } catch (Exception $e) {
                     echo "<p>Error fetching responder details: {$e->getMessage()}</p>";
@@ -56,18 +54,9 @@ class AlertsModel extends Model
 
             } else {
                 $alert->responder_details = null;
-                try {
-                    $users = $dbUser->findBy('id', $alert->uid)->getResult();
-                    $alert->user_details = $users[0] ?? null;
-                } catch (Exception $e) {
-                    echo "<p>Error fetching responder details: {$e->getMessage()}</p>";
-                }
             }
-
-
         }
         unset($alert);
-
         return [
             'alerts' => $alerts
         ];

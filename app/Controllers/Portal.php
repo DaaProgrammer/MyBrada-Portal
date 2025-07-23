@@ -80,18 +80,16 @@ class Portal extends BaseController
         $Alerts = new AlertsModel();
         $Alerts = $Alerts->AllAlerts();
 
-        print_r($Alerts);
+        $data = [
+            'title' => 'MyBrada - Alerts',
+            'showSidebar' => true,
+            'activePage' => 'alerts',
+            'alerts' => $Alerts,
+        ];
 
-        // $data = [
-        //     'title' => 'MyBrada - Alerts',
-        //     'showSidebar' => true,
-        //     'activePage' => 'alerts',
-        //     'alerts' => $Alerts,
-        // ];
-
-        // echo view('partials/header', $data);
-        // echo view('portal/alerts');
-        // echo view('partials/footer');
+        echo view('partials/header', $data);
+        echo view('portal/alerts');
+        echo view('partials/footer');
     }
 
     

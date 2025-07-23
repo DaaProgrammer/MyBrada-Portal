@@ -1140,3 +1140,263 @@ in SYSTEMPATH\Router\Router.php on line 741.
  6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:37:27 --> ErrorException: Maximum execution time of 30 seconds exceeded
+[Method: POST, Route: alerts]
+in VENDORPATH\guzzlehttp\guzzle\src\Handler\StreamHandler.php on line 337.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 14:42:15 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:45:14 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:47:24 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:47:30 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:47:36 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:48:08 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:48:19 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:48:42 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:49:35 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:50:56 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 14:59:51 --> ErrorException: Declaration of App\Models\AlertsModel::objectToArray($data) must be compatible with CodeIgniter\BaseModel::objectToArray($object, bool $onlyChanged = true, bool $recursive = false): array
+[Method: POST, Route: alerts]
+in APPPATH\Models\AlertsModel.php on line 32.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 15:00:19 --> ErrorException: Declaration of App\Models\AlertsModel::objectToArray($data) must be compatible with CodeIgniter\BaseModel::objectToArray($object, bool $onlyChanged = true, bool $recursive = false): array
+[Method: POST, Route: alerts]
+in APPPATH\Models\AlertsModel.php on line 32.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-23 15:01:57 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(53): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 15:02:13 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(53): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 15:02:49 --> TypeError: PHPSupabase\Database::getResult(): Return value must be of type array, stdClass returned
+[Method: POST, Route: alerts]
+in VENDORPATH\rafaelwendel\phpsupabase\src\Database.php on line 56.
+ 1 APPPATH\Models\AlertsModel.php(38): PHPSupabase\Database->getResult()
+ 2 APPPATH\Controllers\Portal.php(81): App\Models\AlertsModel->AllAlerts()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 15:08:24 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 15:08:24 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 15:08:49 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 15:08:49 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 15:15:52 --> ErrorException: Undefined property: stdClass::$first_name
+[Method: GET, Route: alerts]
+in APPPATH\Views\portal\alerts.php on line 30.
+ 1 APPPATH\Views\portal\alerts.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$first_name', 'C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\alerts.php', 30)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\app\\Views\\portal\\alerts.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('portal/alerts', [], true)
+ 5 APPPATH\Controllers\Portal.php(91): view('portal/alerts')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portal->alerts()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 15:20:52 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 15:38:14 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
+CRITICAL - 2025-07-23 18:16:56 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "'https:"
+[Method: GET, Route: %27https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png%27::character%20varying%27::character%20varying]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('\'https:/duendedisplay.co.za/mybrada/img/profile_placeholder.png\'::character varying\'::character varying')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\Ruined\\MyBradaPortal\\public\\index.php')
