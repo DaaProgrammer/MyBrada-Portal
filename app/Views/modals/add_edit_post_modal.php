@@ -89,16 +89,16 @@
                 </div>
                 <label>Post Category</label>
                 <div class="input-group mb-3">
-                <div class="btn-group dropup">
-                  <button type="button" class="btn bg-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="color: #000;">
-                    Choose Category
-                  </button>
-                  <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item border-radius-md" href="javascript:;">News</a></li>
-                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Blog</a></li>
-                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Resources</a></li>
-                  </ul>
-                </div>
+                  <div class="btn-group dropup">
+                    <button type="button" class="btn bg-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="color: #000;">
+                      Choose Category
+                    </button>
+                    <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownMenuButton">
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;">News</a></li>
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Blog</a></li>
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Resources</a></li>
+                    </ul>
+                  </div>
                 </div>
 
                 <div class="form-check form-switch">

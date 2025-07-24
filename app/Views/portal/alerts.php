@@ -92,7 +92,7 @@
                         </td>
                         <td class="align-middle text-center">
                           <div class="ms-auto">
-                            <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#updateAlert">
+                            <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#updateAlert" onclick="assignAlerId(<?= $alert->id ?>)">
                               <i class="fa fa-pencil" style="font-size:25px;color:green"></i>
                             </a>
                             <a class="btn btn-link text-danger text-gradient mb-0" href="javascript:;" onclick="deleteAlert(<?= $alert->id ?>)">
@@ -113,4 +113,4 @@
         </div>
       </div>
 
-      <?= view('modals/update_alert_modal') ?>
+      <?= view('modals/update_alert_modal', $responders['responders']) ?>

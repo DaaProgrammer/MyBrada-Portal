@@ -420,4 +420,44 @@ class ApiController extends BaseController
         ]);
     }
 
+    function assignResponder()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'alert_id' => 'required|integer',
+            'responder_uid' => 'required|integer',
+            'controller_notes' => 'permit_empty|max_length[255]'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        
+        $responderData = $this->request->getJSON();
+        if (!$responderData) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing responder data'
+            ])->setStatusCode(400);
+        }
+
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->assignResponder($responderData);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to assign a Responder'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Responder assigned successfully'
+        ]);
+    }
+
 }

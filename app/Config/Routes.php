@@ -43,4 +43,5 @@ $routes->post('addresponder', 'ApiController::addResponder');
 $routes->post('addnewsfeed', 'ApiController::addNewsfeed');
 $routes->post('addnotice', 'ApiController::addNotice');
 $routes->post('addprofessional', 'ApiController::addProfessional');
+$routes->post('assignresponder', 'ApiController::assignResponder');
 

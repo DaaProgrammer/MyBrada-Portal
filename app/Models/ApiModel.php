@@ -248,4 +248,33 @@ class ApiModel extends Model
             'data' => $data
         ];
     }
+
+    function assignResponder($responderData) {
+        $db = $this->service->initializeDatabase('mybrada_alerts', 'id');
+
+        $query = [
+            'responder_uid' => $responderData->responder_uid,
+            'controller_notes' => $responderData->controller_notes ?? null,
+            'status' => 'Open'
+        ];
+
+        try {
+            $data = $db->update($responderData->alert_id, $query);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        if (!$data) {
+            return [
+                'status' => 'error',
+                'message' => 'Failed to assign responder'
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'message' => 'Responder assigned successfully',
+            'data' => $data
+        ];
+    }
 }

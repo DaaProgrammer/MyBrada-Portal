@@ -524,13 +524,9 @@ function addNewsfeed() {
     const editorData = editorInstance.getData(); // or editorInstance.getData() if you're using CKEditor 5
     document.getElementById('post_content_add').value = editorData;
 
-
-
-
-    console.log("Post Status:", document.getElementById('post_status').value);
-
     const form = document.getElementById('addNewsfeedForm');
     const formData = new FormData(form);
+
     if (!document.getElementById('post_status').checked) {
         formData.set('post_status', 'published'); // or leave it blank if you prefer
     }
@@ -587,6 +583,73 @@ function setAddPostCategory(category) {
     document.getElementById('post_category').value = category;
 }
 
+
+function setResponderDetails(responderData, responderUid, responderName, responderLastName, responderEmail) {
+    var selectedResponder = document.getElementById('chosen_responder');
+    var responderDetailsInput = document.getElementById('responder_details');
+    var responder_uid = document.getElementById('responder_uid');
+    var first_name = document.getElementById('first_nameResponder');
+    var last_name = document.getElementById('last_nameResponder');
+    var email = document.getElementById('emailResponder');
+
+    selectedResponder.innerHTML = responderData;
+    responderDetailsInput.value = responderData;
+    responder_uid.value = responderUid;
+
+    first_name.value = responderName;
+    last_name.value = responderLastName;
+    email.value = responderEmail;
+
+    console.log("Responder Details Set:", responderDetailsInput.value);
+}
+
+function assignAlerId(alertId) {
+   document.getElementById('alert_id_responder').value = alertId;  
+}
+
+function assignResponder() {
+    const formData = new FormData(document.getElementById('updateAlertForm'));
+    Swal.fire({
+        title: 'Assigning Responder...',
+        text: 'Please wait while we process your request.',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+    axios.post('assignresponder', formData,
+        {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function (response) { 
+            if (response.data.status === 'success') {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Responder successfully assigned.",
+                    icon: "success"
+                }).then(() => {
+                    window.location.reload();
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Failed to assign Responder",
+                    text: response.data.message || "An error occurred while assigning the Responder.",
+                });
+            }
+        })
+        .catch(function (error) {
+            console.error(error);
+            Swal.fire({
+                icon: "error",
+                title: "Failed to assign Responder",
+                text: "An error occurred while assigning the Responder.",
+            });
+        }   
+    );
+}
 
 $(document).ready(function() {
     $('.datatables').DataTable({

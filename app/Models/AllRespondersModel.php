@@ -35,12 +35,6 @@ class AllRespondersModel extends Model
         $query = [
             'select' => '*',
             'from'   => 'mybrada_users',
-            'join'   => [
-                [
-                    'table' => 'mybrada_dispatcher',
-                    'tablekey' => 'uid'
-                ]
-            ],
             'where' => 
             [
                 'user_role' => 'eq.dispatcher'
