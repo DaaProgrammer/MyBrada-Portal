@@ -164,4 +164,4 @@
         </div>
 
       </div>
-      <?= view('modals/asign_a_professional_modal'); ?>
+      <?= view('modals/assign_a_professional_modal'); ?>

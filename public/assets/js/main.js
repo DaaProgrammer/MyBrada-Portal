@@ -461,6 +461,131 @@
     }
 
 
+    function addResponder() {
+        const formData = new FormData(document.getElementById('addResponderForm'));
+        Swal.fire({
+            title: 'Adding Responder...',
+            text: 'Please wait while we process your request.',
+            allowOutsideClick: false,
+            didOpen: () => {
+                Swal.showLoading();
+            }
+        });
+
+        axios.post('addresponder', formData,    
+            {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(function (response) {
+                if (response.data.status === 'success') {
+                    Swal.fire({
+                        title: "Success!",
+                        text: "Responder successfully added.",
+                        icon: "success"
+                    }).then(() => {
+                        window.location.reload();
+                    });
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Failed to add Responder",
+                        text: response.data.message || "An error occurred while adding the Responder.",
+                    });
+                }
+            }  )
+            .catch(function (error) {               
+                console.error(error);
+                Swal.fire({
+                    icon: "error",
+                    title: "Failed to add Responder",
+                    text: "An error occurred while adding the Responder.",
+                });
+            });
+    }
+
+
+  function changeDispatcherStatus(checkbox) {
+    var statusSpan = document.getElementById('addResponderStatus');
+    if (checkbox) {
+        statusSpan.innerHTML = 'Active';
+        statusSpan.classList.remove('text-warning', 'text-success');
+        statusSpan.classList.add('text-success');
+    } else {
+        statusSpan.innerHTML = 'Inactive';
+        statusSpan.classList.remove('text-success', 'text-warning');
+        statusSpan.classList.add('text-warning');
+    }
+}
+
+let editorInstance;
+function addNewsfeed() {
+    const editorData = editorInstance.getData(); // or editorInstance.getData() if you're using CKEditor 5
+    document.getElementById('post_content_add').value = editorData;
+
+
+
+
+    console.log("Post Status:", document.getElementById('post_status').value);
+
+    const form = document.getElementById('addNewsfeedForm');
+    const formData = new FormData(form);
+    if (!document.getElementById('post_status').checked) {
+        formData.set('post_status', 'published'); // or leave it blank if you prefer
+    }
+    Swal.fire({
+        title: 'Adding Post...',
+        text: 'Please wait while we process your request.',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+    axios.post('addnewsfeed', formData,    
+        {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function (response) {
+            if (response.data.status === 'success') {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Post successfully added.",
+                    icon: "success"
+                }).then(() => {
+                    window.location.reload();
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Failed to add Post",
+                    text: response.data.message || "An error occurred while adding the Post.",
+                });
+            }
+        }  )
+        .catch(function (error) {               
+            console.error(error);
+            Swal.fire({
+                icon: "error",
+                title: "Failed to add Post",
+                text: "An error occurred while adding the Post.",
+            });
+        });
+}
+
+
+function setPostStatus(){
+    const postStatusCheckbox = document.getElementById('post_status');
+    const postStatus = postStatusCheckbox.checked ? 'draft' : 'published';
+    postStatusCheckbox.value = postStatus; // Set the value to 'draft' or 'published'
+}
+
+function setAddPostCategory(category) {
+    document.getElementById('chosen_category').textContent = category;
+    document.getElementById('post_category').value = category;
+}
 
 
 $(document).ready(function() {
@@ -470,5 +595,33 @@ $(document).ready(function() {
         "searching": true,
         "info": false,
         "lengthChange": false
+    });
+
+    ClassicEditor
+    .create(document.querySelector('textarea[name="ckeditor"]'))
+    .then(editor => {
+        editorInstance = editor; // store reference globally
+    })
+    .catch(error => {
+      console.error(error);
+    });
+
+
+    const preview = document.getElementById('image_preview');
+    const widget = uploadcare.Widget('[role=uploadcare-uploader]');
+
+    widget.onUploadComplete(function(info) {
+        console.log("Uploaded file CDN URL:", info.cdnUrl);
+        preview.style.display = 'block';
+        preview.src = info.cdnUrl;
+    });
+
+
+    widget.onChange(function(file) {
+        if (!file) {
+            // File was removed
+            preview.style.display = 'none';
+            preview.src = '';
+        }
     });
 });

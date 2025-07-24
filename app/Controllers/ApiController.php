@@ -336,4 +336,88 @@ class ApiController extends BaseController
 
 
 
+    public function addResponder()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'name' => 'required|min_length[3]|max_length[50]',
+            'surname' => 'required|min_length[3]|max_length[50]',
+            'email' => 'required|valid_email',
+            'phone' => 'required|min_length[10]|max_length[15]'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        
+        $responderData = $this->request->getJSON();
+        if (!$responderData) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing responder data'
+            ])->setStatusCode(400);
+        }
+
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->addResponder($responderData);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to add a Responder'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Responder added successfully'
+        ]);
+    }
+
+
+    function addNewsfeed()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'post_img' => 'permit_empty|is_image[post_img]|max_size[post_img,2048]', // 2MB max
+            'title' => 'required|min_length[3]|max_length[100]',
+            'ckeditor' => 'required|min_length[10]',
+            'category' => 'required|in_list[news,blog,resources]',
+            'post_status' => 'required|in_list[draft,published]'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        
+        $newsfeedData = $this->request->getJSON();
+        if (!$newsfeedData) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing newsfeed data'
+            ])->setStatusCode(400);
+        }
+
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->addNewsfeed($newsfeedData);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to add a Newsfeed'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Newsfeed added successfully'
+        ]);
+    }
+
 }

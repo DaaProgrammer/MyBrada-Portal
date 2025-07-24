@@ -185,5 +185,67 @@ class ApiModel extends Model
         ];
     }
 
+     public function addResponder($responderData){
+        $db = $this->service->initializeDatabase('mybrada_users', 'id');
 
+        $query = [
+            'user_role' => 'dispatcher',
+            'first_name' => $responderData->name,
+            'last_name' => $responderData->surname,
+            'email_address' => $responderData->email,
+            'phone_number' => $responderData->phone,
+            'status' => $responderData->status ?? 'inactive'
+        ];
+
+        try{
+            $data = $db->insert($query);
+        }
+        catch(Exception $e){
+            echo $e->getMessage();
+        }    
+        
+        if (!$data) {
+            return [
+                'status' => 'error',
+                'message' => 'Failed to add responder'
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'message' => 'Responder added successfully',
+            'data' => $data
+        ];
+    }
+
+    function addNewsfeed($newsfeedData) {
+        $db = $this->service->initializeDatabase('mybrada_newsfeed', 'id');
+
+        $query = [
+            'image_path' => $newsfeedData->image ?? null,
+            'post_title' => $newsfeedData->title,
+            'post_content' => $newsfeedData->ckeditor,
+            'status' => $newsfeedData->post_status ?? 'draft',
+            'category' => $newsfeedData->category,
+        ];
+
+        try {
+            $data = $db->insert($query);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        if (!$data) {
+            return [
+                'status' => 'error',
+                'message' => 'Failed to add newsfeed post'
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'message' => 'Post added successfully',
+            'data' => $data
+        ];
+    }
 }

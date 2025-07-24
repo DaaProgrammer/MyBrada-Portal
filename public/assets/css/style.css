@@ -31,3 +31,8 @@ li#usersTable_next {
 /* ul.pagination li {
     margin: 4px !important;
 } */
+
+
+.ck.ck-reset.ck-editor.ck-rounded-corners {
+    width: inherit;
+}

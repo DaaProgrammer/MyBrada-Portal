@@ -28,7 +28,7 @@
                       <?php
                         // Clean image URL
                         $imgUrl = trim(str_replace(["'::character varying", "'"], '', $responder->profile_image));
-                        $status = !empty($responder->mybrada_dispatcher[0]->status) ? strtolower($responder->mybrada_dispatcher[0]->status) : 'unknown';
+                        $status = !empty($responder->status) ? strtolower($responder->status) : 'unknown';
                         $statusClass = $status === 'active' ? 'bg-gradient-success' : ($status === 'inactive' ? 'bg-gradient-secondary' : 'bg-gradient-warning');
                         $statusLabel = ucfirst($status);
                         $dateCreated = date('d/m/Y', strtotime($responder->date_created));

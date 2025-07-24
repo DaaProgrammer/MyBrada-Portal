@@ -29,13 +29,22 @@
   <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
 
+
+
+  <!-- CK EDIOR -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
+<script>
+  UPLOADCARE_PUBLIC_KEY = 'f30a8d5627e6171d2c62';
+</script>
+<script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+
+
   <!-- Your custom JS (with cache busting) -->
   <script src="<?= base_url('assets/js/main.js?v=' . time()) ?>"></script>
+
 </head>
 
-
-  
-</head>
 <body class="g-sidenav-show bg-gray-100">
   <div class="min-height-300 position-absolute w-100 opacity-10" style="background-image: url('../assets/img/header.jpeg');
           background-size: 60% 71; background-position:bottom center"></div>    

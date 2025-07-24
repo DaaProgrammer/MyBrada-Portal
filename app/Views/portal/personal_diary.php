@@ -38,7 +38,7 @@
                           </td>
                           <td class="align-middle text-center">
                             <div class="ms-auto">
-                              <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#viewdiary<?= esc($entry->id) ?>">
+                              <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#viewdiary">
                                 <i class="fa fa-eye" style="font-size:25px;color:green"></i>
                               </a>
                             </div>

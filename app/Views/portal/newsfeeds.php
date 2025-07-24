@@ -32,8 +32,8 @@
                         $title = htmlspecialchars($post->post_title);
                         $dateCreated = date('Y-m-d', strtotime($post->date_created));
                         $status = strtolower($post->status);
-                        $statusClass = $status === 'active' ? 'bg-gradient-success' : 'bg-gradient-warning';
-                        $statusLabel = $status === 'active' ? 'Uploaded' : 'Pending';
+                        $statusClass = $status === 'published' ? 'bg-gradient-success' : 'bg-gradient-warning';
+                        $statusLabel = $status === 'published' ? 'published' : 'draft';
                         $imgPath = !empty($post->image_path) ? $post->image_path : '../assets/img/kal-visuals-square.jpg';
                       ?>
                       <tr>
@@ -42,7 +42,7 @@
                             <div>
                               <img src="<?= $imgPath ?>"
                                   onerror="this.onerror=null; this.src='../assets/img/kal-visuals-square.jpg';"
-                                  class="avatar avatar-sm me-2"
+                                  class="avatar avatar-xl me-2"
                                   alt="category-image">
                             </div>
                             <div class="d-flex flex-column justify-content-center">

@@ -22,7 +22,7 @@
                   </div>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="btn bg-primary btn-lg btn-rounded w-100 mt-4 mb-0" style="color: #000;">Assign</button>
+                  <button type="button" class="btn bg-primary btn-lg btn-rounded w-100 mt-4 mb-0" style="color: #000;">Assign Professional</button>
                 </div>
               </form>
             </div>

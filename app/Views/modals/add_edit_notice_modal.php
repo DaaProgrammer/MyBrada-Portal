@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="text-center">
-                  <button type="button" class="btn bg-primary btn-lg btn-rounded w-100 mt-4 mb-0" style="color: #000;">Upload Notice</button>
+                  <button type="button" class="btn bg-primary btn-lg btn-rounded w-100 mt-4 mb-0" style="color: #000;">Add Notice</button>
                 </div>
               </form>
             </div>
@@ -86,7 +86,7 @@
                 </div>
 
                 <div class="text-center">
-                  <button type="button" class="btn bg-primary btn-lg btn-rounded w-100 mt-4 mb-0" style="color: #000;">Upload Notice</button>
+                  <button type="button" class="btn bg-primary btn-lg btn-rounded w-100 mt-4 mb-0" style="color: #000;">Update Notice</button>
                 </div>
               </form>
             </div>

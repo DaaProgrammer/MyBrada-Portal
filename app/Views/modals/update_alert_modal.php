@@ -5,7 +5,7 @@
         <div class="modal-body p-0">
           <div class="card card-plain">
             <div class="card-header pb-0 text-left">
-                <h3 class="font-weight-bolder text-primary text-gradient">Update Alert</h3>
+                <h3 class="font-weight-bolder text-primary text-gradient">Emergency Alert</h3>
             </div>
             <div class="card-body pb-3">
               <form role="form text-left">
@@ -28,7 +28,7 @@
                 </div>
 
                 <div class="text-center">
-                  <button type="button" class="btn bg-primary btn-lg btn-rounded w-100 mt-4 mb-0" style="color: #000;">Upload Post</button>
+                  <button type="button" class="btn bg-primary btn-lg btn-rounded w-100 mt-4 mb-0" style="color: #000;">Assign Responder</button>
                 </div>
               </form>
             </div>
