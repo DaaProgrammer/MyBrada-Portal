@@ -28,5 +28,11 @@ $routes->post('professional_support', 'PortalController::professionalSupport');
 $routes->post('personal_diary', 'PortalController::personalDiary');
 $routes->post('blockuser', 'ApiController::blockUser');
 $routes->post('unblockuser', 'ApiController::unblockUser');
+$routes->post('deleteresponder', 'ApiController::deleteResponder');
+$routes->post('deletenewsfeed', 'ApiController::deleteNewsfeed');
+$routes->post('deletenotice', 'ApiController::deleteNotice');
+$routes->post('deleteprofessionalsupport', 'ApiController::deleteProfessionalSupport');
+$routes->post('deleteprofessional', 'ApiController::deleteProfessional');
+$routes->post('deletealert', 'ApiController::deleteAlert');
 
 

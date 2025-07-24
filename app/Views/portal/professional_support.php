@@ -146,7 +146,7 @@
                               <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#assignProfessional">
                                 <i class="fa fa-pencil" style="font-size:25px;color:green"></i>
                               </a>
-                              <a class="btn btn-link text-danger text-gradient mb-0" href="javascript:;" onclick="deleteProfessionalSupport(<?= $item->id ?>)">
+                              <a class="btn btn-link text-danger text-gradient mb-0" href="javascript:;" onclick="deleteProfessional(<?= $item->id ?>)">
                                 <i class="fa fa-trash-o" style="font-size:25px;color:red"></i>
                               </a>
                             </div>

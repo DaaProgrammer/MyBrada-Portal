@@ -47,8 +47,7 @@ class ApiController extends BaseController
 
         return $this->response->setJSON([
             'status' => 'success',
-            'message' => 'User blocked successfully',
-            'userid' => $userId
+            'message' => 'User blocked successfully'
         ]);
 
     }
@@ -88,8 +87,249 @@ class ApiController extends BaseController
 
         return $this->response->setJSON([
             'status' => 'success',
-            'message' => 'User unblocked successfully',
-            'userid' => $userId
+            'message' => 'User unblocked successfully'
+        ]);
+
+    }
+
+
+    public function deleteResponder()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'user_id' => 'required|integer'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        $userId = $this->request->getJSON();
+        if (!$userId) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing user_id'
+            ])->setStatusCode(400);
+        }
+
+  
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->deleteResponder($userId->user_id);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to delete a Responder'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Responder deleted successfully'
+        ]);
+
+    }
+
+
+
+    public function deleteNewsfeed()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'post_id' => 'required|integer'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        $postId = $this->request->getJSON();
+        if (!$postId) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing post_id'
+            ])->setStatusCode(400);
+        }
+
+  
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->deleteNewsfeed($postId->post_id);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to delete a Post'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Post deleted successfully'
+        ]);
+
+    }
+
+
+    public function deleteNotice()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'notice_id' => 'required|integer'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        $noticeId = $this->request->getJSON();
+        if (!$noticeId) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing notice_id'
+            ])->setStatusCode(400);
+        }
+
+  
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->deleteNotice($noticeId->notice_id);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to delete a Notice'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Notice deleted successfully'
+        ]);
+
+    }
+
+
+
+    public function deleteAlert()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'alert_id' => 'required|integer'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        $alertId = $this->request->getJSON();
+        if (!$alertId) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing alert_id'
+            ])->setStatusCode(400);
+        }
+
+  
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->deleteAlert($alertId->alert_id);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to delete the Alert'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Alert deleted successfully'
+        ]);
+
+    }
+
+
+    public function deleteProfessionalSupport()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'professionalSupport_id' => 'required|integer'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        $professionalSupportId = $this->request->getJSON();
+        if (!$professionalSupportId) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing professionalSupport_id'
+            ])->setStatusCode(400);
+        }
+
+  
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->deleteProfessionalSupport($professionalSupportId->professionalSupport_id);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to delete a Professional Support'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Professional Support deleted successfully',
+        ]);
+
+    }
+
+
+    public function deleteProfessional()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'professional_id' => 'required|integer'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        $professionalId = $this->request->getJSON();
+        if (!$professionalId) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing professional_id'
+            ])->setStatusCode(400);
+        }
+
+  
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->deleteProfessional($professionalId->professional_id);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to delete a Professional'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Professional deleted successfully',
         ]);
 
     }
