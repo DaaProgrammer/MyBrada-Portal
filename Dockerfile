@@ -8,7 +8,7 @@ RUN a2enmod rewrite
 # Install required PHP extensions
 RUN apt-get update && apt-get install -y \
     zip unzip libzip-dev libpng-dev libonig-dev libxml2-dev curl \
-    && docker-php-ext-install pdo pdo_mysql mbstring zip gd intl
+    && docker-php-ext-install pdo pdo_mysql mysqli mbstring zip gd intl
 
 # Copy project to /var/www/html
 COPY . /var/www/html

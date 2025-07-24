@@ -16,7 +16,7 @@ use App\Libraries\SupabaseService;
 helper('jwt');
 helper('cookie');
 
-class Portal extends BaseController
+class PortalController extends BaseController
 {
     public function dashboard() { 
 
@@ -128,7 +128,7 @@ class Portal extends BaseController
         echo view('partials/footer');
     }
 
-    public function PersonalDiary() {
+    public function personalDiary() {
         $personalDiaryModel = new personalDiaryModel();
         $personalDiary = $personalDiaryModel->PersonalDiary();
 

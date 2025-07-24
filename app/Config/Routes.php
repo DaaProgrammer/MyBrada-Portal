@@ -6,25 +6,27 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->group('', ['filter' => 'jwt'], function($routes) {
-    $routes->get('dashboard', 'Portal::dashboard');
-    $routes->get('responders', 'Portal::responders');
-    $routes->get('newsfeeds', 'Portal::newsfeeds');
-    $routes->get('alerts', 'Portal::alerts');
-    $routes->get('notices', 'Portal::notices');
-    $routes->get('professional_support', 'Portal::professionalSupport');
-    $routes->get('personal_diary', 'Portal::PersonalDiary');
+    $routes->get('dashboard', 'PortalController::dashboard');
+    $routes->get('responders', 'PortalController::responders');
+    $routes->get('newsfeeds', 'PortalController::newsfeeds');
+    $routes->get('alerts', 'PortalController::alerts');
+    $routes->get('notices', 'PortalController::notices');
+    $routes->get('professional_support', 'PortalController::professionalSupport');
+    $routes->get('personal_diary', 'PortalController::personalDiary');
 });
-$routes->get('/', 'Auth::index');
+$routes->get('/', 'AuthController::index');
 // $routes->get('/', 'Auth::login');
-$routes->get('login', 'Auth::login');
-$routes->post('attemptLogin', 'Auth::attemptLogin');
-$routes->get('logout', 'Auth::logout');
-$routes->post('dashboard', 'Portal::dashboard');
-$routes->post('responders', 'Portal::responders');
-$routes->post('newsfeeds', 'Portal::newsfeeds');
-$routes->post('alerts', 'Portal::alerts');
-$routes->post('notices', 'Portal::notices');
-$routes->post('professional_support', 'Portal::professionalSupport');
-$routes->post('personal_diary', 'Portal::PersonalDiary');
+$routes->get('login', 'AuthController::login');
+$routes->post('attemptLogin', 'AuthController::attemptLogin');
+$routes->get('logout', 'AuthController::logout');
+$routes->post('dashboard', 'PortalController::dashboard');
+$routes->post('responders', 'PortalController::responders');
+$routes->post('newsfeeds', 'PortalController::newsfeeds');
+$routes->post('alerts', 'PortalController::alerts');
+$routes->post('notices', 'PortalController::notices');
+$routes->post('professional_support', 'PortalController::professionalSupport');
+$routes->post('personal_diary', 'PortalController::personalDiary');
+$routes->post('blockuser', 'ApiController::blockUser');
+$routes->post('unblockuser', 'ApiController::unblockUser');
 
 

@@ -11,7 +11,7 @@ use App\Libraries\SupabaseService;
 helper('jwt');
 helper('cookie');
 
-class Auth extends BaseController
+class AuthController extends BaseController
 {
     public function index(): string
     {
