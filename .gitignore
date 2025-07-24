@@ -1,0 +1,46 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore Composer dependencies (optional, unless you want to vendor everything)
+vendor/
+
+# Node modules (if using frontend tools like npm/yarn)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# CI4 writable folder content (cache, logs, sessions, etc.)
+writable/cache/*
+writable/logs/*
+writable/session/*
+writable/uploads/*
+
+# Allow required writable subfolders
+!writable/cache/
+!writable/logs/
+!writable/session/
+!writable/uploads/
+
+# Ignore PHPUnit test result files
+.phpunit.result.cache
+
+# Ignore IDE and editor settings
+.vscode/
+.idea/
+
+# Ignore Docker-related
+docker-compose.override.yml
+.dockerignore
+
+# Ignore backup/OS files
+*.bak
+*.swp
+*.swo
+
+# Ignore compiled files or build outputs
+/public/build/
