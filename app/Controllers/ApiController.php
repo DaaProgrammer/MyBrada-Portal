@@ -106,14 +106,15 @@ class ApiController extends BaseController
                 'errors' => $this->validator->getErrors()
             ])->setStatusCode(422);
         }
+        
         $userId = $this->request->getJSON();
+
         if (!$userId) {
             return $this->response->setJSON([
                 'status' => 'error',
                 'message' => 'Missing user_id'
             ])->setStatusCode(400);
         }
-
   
         $ApiModel = new ApiModel();
         $result = $ApiModel->deleteResponder($userId->user_id);
@@ -344,7 +345,8 @@ class ApiController extends BaseController
             'name' => 'required|min_length[3]|max_length[50]',
             'surname' => 'required|min_length[3]|max_length[50]',
             'email' => 'required|valid_email',
-            'phone' => 'required|min_length[10]|max_length[15]'
+            'phone' => 'required|min_length[10]|max_length[15]',
+            'responder_status' => 'required|in_list[active,inactive]'
         ];
         if (!$this->validate($rules)) {
             return $this->response->setJSON([
@@ -460,4 +462,44 @@ class ApiController extends BaseController
         ]);
     }
 
+    function addNotice()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'notice_title' => 'required|min_length[3]|max_length[100]',
+            'notice_contents' => 'required|min_length[10]',
+            'responder_uid' => 'required|integer',
+            'notice_status' => 'required|in_list[published,draft]'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        
+        $noticeData = $this->request->getJSON();
+        if (!$noticeData) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing notice data'
+            ])->setStatusCode(400);
+        }
+
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->addNotice($noticeData);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to add a Notice'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Notice added successfully'
+        ]);
+    }
 }

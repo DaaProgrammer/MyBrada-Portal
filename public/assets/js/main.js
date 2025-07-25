@@ -463,6 +463,13 @@
 
     function addResponder() {
         const formData = new FormData(document.getElementById('addResponderForm'));
+
+        if (document.getElementById('responder_status').checked) {
+            formData.set('responder_status', 'active'); // or leave it blank if you prefer
+        }else{
+            formData.set('responder_status', 'inactive');
+        }
+
         Swal.fire({
             title: 'Adding Responder...',
             text: 'Please wait while we process your request.',
@@ -650,6 +657,59 @@ function assignResponder() {
         }   
     );
 }
+
+
+function addNotice() {
+    const formData = new FormData(document.getElementById('addNoticeForm'));
+    if (document.getElementById('post_status').checked) {
+        formData.set('notice_status', 'draft'); // or leave it blank if you prefer
+    }else{
+        formData.set('notice_status', 'published');
+    }
+
+    Swal.fire({
+        title: 'Adding Notice...',
+        text: 'Please wait while we process your request.',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+    axios.post('addnotice', formData,
+        {   
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function (response) {
+            if (response.data.status === 'success') {
+
+                Swal.fire({
+                    title: "Success!",
+                    text: "Notice successfully added.",
+                    icon: "success"
+                }).then(() => {
+                    window.location.reload();
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Failed to add Notice",
+                    text: "An error occurred while adding the Notice.",
+                });
+            }
+        })
+        .catch(function (error) {
+            console.error(error);
+            Swal.fire({
+                icon: "error",
+                title: "Failed to add Notice",
+                text: "An error occurred while adding the Notice.",
+            });
+        }
+    );
+}
+
 
 $(document).ready(function() {
     $('.datatables').DataTable({

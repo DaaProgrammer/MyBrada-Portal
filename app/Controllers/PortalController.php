@@ -101,11 +101,14 @@ class PortalController extends BaseController
         $Notices = new NoticesModel();
         $Notices = $Notices->AllNotices();
 
+        $AllResponders = new AllRespondersModel();
+        $AllResponders = $AllResponders->AllResponders();
 
         $data = [
             'title' => 'MyBrada - Notices',
             'showSidebar' => true,
-            'activePage' => 'notices'
+            'activePage' => 'notices',
+            'responders' => $AllResponders
         ];
         echo view('partials/header', $data);
         echo view('portal/notices', $Notices);

@@ -103,7 +103,7 @@
 
                 <div class="form-check form-switch">
                   <input type="checkbox" class="form-check-input" id="post_status_edit" onclick="">
-                  <label for="isDraft">Save as draft? <span id="post_status_error"></span></label>
+                  <label for="isDraft">Save as draft?</label>
                 </div>
 
                 <div class="text-center">

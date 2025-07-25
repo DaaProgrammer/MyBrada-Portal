@@ -70,29 +70,13 @@ class ApiModel extends Model
 
     public function deleteResponder($userId)
     {
-        $db = $this->service->initializeDatabase('mybrada_dispatcher', 'uid');
+        $db = $this->service->initializeDatabase('mybrada_users', 'id');
         try{
             $data = $db->delete($userId);
         }
         catch(Exception $e){
             echo $e->getMessage();
-        }   
-        if (!$data) {
-            return [
-                'status' => 'error',
-                'message' => 'Failed to delete responder'
-            ];
-        }
-
-        if ($data) {
-            $db = $this->service->initializeDatabase('mybrada_users', 'id');
-            try{
-                $data = $db->delete($userId);
-            }
-            catch(Exception $e){
-                echo $e->getMessage();
-            }    
-        }
+        }    
 
         return [
             'data' => $data
@@ -194,7 +178,7 @@ class ApiModel extends Model
             'last_name' => $responderData->surname,
             'email_address' => $responderData->email,
             'phone_number' => $responderData->phone,
-            'status' => $responderData->status ?? 'inactive'
+            'status' => $responderData->responder_status ?? 'inactive'
         ];
 
         try{
@@ -251,11 +235,10 @@ class ApiModel extends Model
 
     function assignResponder($responderData) {
         $db = $this->service->initializeDatabase('mybrada_alerts', 'id');
-
         $query = [
             'responder_uid' => $responderData->responder_uid,
             'controller_notes' => $responderData->controller_notes ?? null,
-            'status' => 'Open'
+            'status' => 'Assigned',
         ];
 
         try {
@@ -274,6 +257,36 @@ class ApiModel extends Model
         return [
             'status' => 'success',
             'message' => 'Responder assigned successfully',
+            'data' => $data
+        ];
+    }
+
+    function addNotice($noticeData) {
+        $db = $this->service->initializeDatabase('mybrada_noticies', 'id');
+
+        $query = [
+            'notice_title' => $noticeData->notice_title,
+            'notice_content' => $noticeData->notice_contents,
+            'responder_uid' => $noticeData->responder_uid ?? null,
+            'status' => $noticeData->notice_status ?? 'draft',
+        ];
+
+        try {
+            $data = $db->insert($query);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        if (!$data) {
+            return [
+                'status' => 'error',
+                'message' => 'Failed to add notice'
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'message' => 'Notice added successfully',
             'data' => $data
         ];
     }
