@@ -39,6 +39,7 @@
 </script>
 <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/quill-delta-to-html@0.12.1/dist/browser/QuillDeltaToHtmlConverter.bundle.js"></script>
 
   <!-- Your custom JS (with cache busting) -->
   <script src="<?= base_url('assets/js/main.js?v=' . time()) ?>"></script>

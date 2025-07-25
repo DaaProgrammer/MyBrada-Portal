@@ -155,7 +155,8 @@ class ApiModel extends Model
 
     public function deleteProfessional($professionalId)
     {
-        $db = $this->service->initializeDatabase('mybrada_professionals', 'id');
+
+        $db = $this->service->initializeDatabase('mybrada_support', 'professional_id');
    
         try{
             $data = $db->delete($professionalId);
@@ -163,8 +164,28 @@ class ApiModel extends Model
         catch(Exception $e){
             echo $e->getMessage();
         }    
+
+        if (!$data) {
+            return [
+                'status' => 'error',
+                'message' => 'Failed to delete professional'
+            ];
+        }
+
+        if($data){
+            $db = $this->service->initializeDatabase('mybrada_professionals', 'id');
+   
+            try{
+                $data = $db->delete($professionalId);
+            }
+            catch(Exception $e){
+                echo $e->getMessage();
+            }               
+        }
         
         return [
+            'status' => 'success',
+            'message' => 'Professional deleted successfully',
             'data' => $data
         ];
     }
@@ -287,6 +308,100 @@ class ApiModel extends Model
         return [
             'status' => 'success',
             'message' => 'Notice added successfully',
+            'data' => $data
+        ];
+    }
+
+    function assignProfessional($professionalData) {
+        $db = $this->service->initializeDatabase('mybrada_professionals', 'id');
+
+        if (empty($professionalData->support_id) && empty($professionalData->professional_id)) {
+            return [
+                'status' => 'error',
+                'message' => 'Support ID and Professional ID are required'
+            ];
+        }
+        
+        $query = [
+            'select' => '*',
+            'from'   => 'mybrada_professionals',
+            'where' => 
+            [
+                'id' => 'eq.'.$professionalData->professional_id
+            ]
+        ];
+
+        try {
+            $data = $db->createCustomQuery($query)->getResult();
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+
+        if (empty($data)) {
+            return [
+                'status' => 'error',
+                'message' => 'Professional not found'
+            ];
+        }
+
+
+        $db = $this->service->initializeDatabase('mybrada_support', 'id');
+        $query = [
+            'professional_id' => $data[0]->id,
+            'professional_name' => $data[0]->first_name . ' ' . $data[0]->last_name,
+            'professional_email' => $data[0]->email_address,
+            'professional_number' => $data[0]->phone_number ?? null,
+            'status' => 'Assigned',
+        ];
+
+        try {
+            $data = $db->update($professionalData->support_id, $query);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        if (empty($data)) {
+            return [
+                'status' => 'error',
+                'message' => 'Failed to assign professional'
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'message' => 'Professional assigned successfully',
+            'data' => $data
+        ];
+    }
+
+    function addProfessional($professionalData) {
+        $db = $this->service->initializeDatabase('mybrada_professionals', 'id');
+
+        $query = [
+            'first_name' => $professionalData->first_name,
+            'last_name' => $professionalData->last_name,
+            'email_address' => $professionalData->email_address,
+            'phone_number' => $professionalData->phone_number ?? null,
+            'status' => $professionalData->professional_status ?? 'inactive',
+        ];
+
+        try {
+            $data = $db->insert($query);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        if (!$data) {
+            return [
+                'status' => 'error',
+                'message' => 'Failed to add professional'
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'message' => 'Professional added successfully',
             'data' => $data
         ];
     }

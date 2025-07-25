@@ -67,7 +67,7 @@
                           </td>
                           <td class="align-middle text-center">
                             <div class="ms-auto">
-                              <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#assignProfessional">
+                              <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#assignProfessional" onclick="assignSupportId(<?= $item->id ?>)">
                                 <i class="fa fa-pencil" style="font-size:25px;color:green"></i>
                               </a>
                               <a class="btn btn-link text-danger text-gradient mb-0" href="javascript:;" onclick="deleteProfessionalSupport(<?= $item->id ?>)">
@@ -79,6 +79,7 @@
                       <?php endforeach; ?>
                     </tbody>
                   </table>
+
                 <?php else: ?>
                   <p>No professional support records available.</p>
                 <?php endif; ?>
@@ -91,7 +92,14 @@
         <div class="col-lg-12 mb-lg-0 mb-4">
           <div class="card mb-4">
             <div class="card-header pb-0">
-              <h6>List of Professionals</h6>
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <h6>List of Professionals</h6>
+                </div>
+                <div class="col-6 text-end">
+                  <a class="btn bg-gradient-dark mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#addProfessional">Add a Professional</a>
+                </div>
+              </div>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-0">
@@ -136,7 +144,7 @@
                           </td>
                           <td class="align-middle text-center text-sm">
                             <?php
-                              $statusClass = strtolower(trim($item->status)) === 'assigned' ? 'bg-gradient-success' : 'bg-gradient-warning';
+                              $statusClass = strtolower(trim($item->status)) === 'active' ? 'bg-gradient-success' : 'bg-gradient-warning';
                               $statusLabel = ucfirst(trim($item->status));
                             ?>
                             <span class="badge badge-sm <?= $statusClass ?>"><?= $statusLabel ?></span>
@@ -165,3 +173,4 @@
 
       </div>
       <?= view('modals/assign_a_professional_modal'); ?>
+      <?= view('modals/add_edit_professional_modal'); ?>

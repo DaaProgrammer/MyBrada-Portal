@@ -21,23 +21,33 @@
                     </button><br/>
                     <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownMenuButton">
                       <?php foreach ($responders['responders'] as $responder): ?>
-                        <li>
-                          <a class="dropdown-item border-radius-md" href="javascript:;" data-id="<?= htmlspecialchars($responder->first_name).' '.htmlspecialchars($responder->last_name).' : '.htmlspecialchars($responder->email_address) ?>" onclick="setResponderDetails(this.dataset.id, '<?= htmlspecialchars($responder->id) ?>', '<?= htmlspecialchars($responder->first_name) ?>', '<?= htmlspecialchars($responder->last_name) ?>', '<?= htmlspecialchars($responder->email_address) ?>')">
-                            <?= htmlspecialchars($responder->first_name).' '.htmlspecialchars($responder->last_name).' : '.htmlspecialchars($responder->email_address) ?>
-                          </a>
-                        </li>
+                        <?php if ($responder->status === 'active' || $responder->status === 'verified'): ?>
+                          <li>
+                            <a class="dropdown-item border-radius-md" href="javascript:;" data-id="<?= htmlspecialchars($responder->first_name).' '.htmlspecialchars($responder->last_name).' : '.htmlspecialchars($responder->email_address) ?>" onclick="setResponderDetails(this.dataset.id, '<?= htmlspecialchars($responder->id) ?>', '<?= htmlspecialchars($responder->first_name) ?>', '<?= htmlspecialchars($responder->last_name) ?>', '<?= htmlspecialchars($responder->email_address) ?>')">
+                              <?= htmlspecialchars($responder->first_name).' '.htmlspecialchars($responder->last_name).' : '.htmlspecialchars($responder->email_address) ?>
+                            </a>
+                          </li>
+                        <?php endif; ?>
                       <?php endforeach; ?>
                     </ul>
                   </div>
-                  <h6 class="mb-0" id="chosen_responder">
+                <div class="col-12 mb-3">
+                    <h6 class="mb-0" id="chosen_responder">
                     <?php
-                      $defaultResponder = !empty($responders['responders']) ? $responders['responders'][0] : null;
+                      // Filter responders to only those with status 'active'
+                      $activeResponders = array_filter(
+                      $responders['responders'],
+                      function($responder) {
+                        return $responder->status === 'active';
+                      }
+                      );
+                      $defaultResponder = !empty($activeResponders) ? reset($activeResponders) : null;
                       echo $defaultResponder
-                        ? htmlspecialchars($defaultResponder->first_name).' '.htmlspecialchars($defaultResponder->last_name).' : '.htmlspecialchars($defaultResponder->email_address)
-                        : 'Choose Responder';
+                      ? htmlspecialchars($defaultResponder->first_name).' '.htmlspecialchars($defaultResponder->last_name).' : '.htmlspecialchars($defaultResponder->email_address)
+                      : 'Choose Responder';
                     ?>
-                  </h6>
-
+                    </h6>
+                </div><br/>
                   <input type="hidden" name="responder" value="<?php
                       echo $defaultResponder
                         ? htmlspecialchars($defaultResponder->first_name).' '.htmlspecialchars($defaultResponder->last_name).' : '.htmlspecialchars($defaultResponder->email_address)

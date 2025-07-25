@@ -7,22 +7,47 @@
                 <h3 class="font-weight-bolder text-primary text-gradient">Assign a Professional</h3>
             </div>
             <div class="card-body pb-3">
-              <form role="form text-left">
+              <form role="form text-left" id="assignProfessionalForm">
                 <label>Assign to a Professional</label>
                 <div class="input-group mb-3">
                   <div class="btn-group dropup">
                     <button type="button" class="btn bg-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="color: #000;">
-                      Choose Responder
+                      Choose Professional
                     </button>
                     <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownMenuButton">
-                      <li><a class="dropdown-item border-radius-md" href="javascript:;">John Wick - john@doe.co.za</a></li>
-                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Rambo - rambo@steve.co.za</a></li>
-                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Van Dam - van@dam.co.za</a></li>
+                      <?php foreach ($professionals['professionals'] as $professional): ?>
+                        <?php if ($professional->status === 'active'): ?>
+                          <li>
+                            <a class="dropdown-item border-radius-md" href="javascript:;" data-id="<?= htmlspecialchars($professional->id) ?>" onclick="setProfessionalDetails(this.dataset.id, '<?= htmlspecialchars($professional->first_name) ?>', '<?= htmlspecialchars($professional->last_name) ?>', '<?= htmlspecialchars($professional->email_address) ?>')">
+                              <?= htmlspecialchars($professional->first_name) ?> <?= htmlspecialchars($professional->last_name) ?> - <?= htmlspecialchars($professional->email_address) ?>
+                            </a>
+                          </li>
+                        <?php endif; ?>
+                      <?php endforeach; ?>
                     </ul>
                   </div>
                 </div>
+                 <h6 class="mb-0" id="chosen_professional">
+                  <?php
+                    $activeProfessional = null;
+                    if (!empty($professionals['professionals'])) {
+                      foreach ($professionals['professionals'] as $professional) {
+                        if ($professional->status === 'active') {
+                          $activeProfessional = $professional;
+                          break;
+                        }
+                      }
+                    }
+                    echo $activeProfessional
+                      ? htmlspecialchars($activeProfessional->first_name).' '.htmlspecialchars($activeProfessional->last_name).' : '.htmlspecialchars($activeProfessional->email_address)
+                      : 'Choose professional';
+                  ?>
+                  </h6>
+                <input type="hidden" id="support_id" value="" name="support_id">
+                <input type="hidden" id="professional_id" value="<?= $activeProfessional ? htmlspecialchars($activeProfessional->id) : '' ?>" name="professional_id">
+
                 <div class="text-center">
-                  <button type="button" class="btn bg-primary btn-lg btn-rounded w-100 mt-4 mb-0" style="color: #000;">Assign Professional</button>
+                  <button type="button" class="btn bg-primary btn-lg btn-rounded w-100 mt-4 mb-0" style="color: #000;" onclick="assignProfessional()">Assign Professional</button>
                 </div>
               </form>
             </div>

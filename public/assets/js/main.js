@@ -710,6 +710,152 @@ function addNotice() {
     );
 }
 
+function assignProfessional() {
+    const formData = new FormData(document.getElementById('assignProfessionalForm'));
+    Swal.fire({
+        title: 'Assigning Professional...',
+        text: 'Please wait while we process your request.',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+    axios.post('asssignprofessional', formData,
+        {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function (response) {
+            if (response.data.status === 'success') {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Professional successfully assigned.",
+                    icon: "success"
+                }).then(() => {
+                    window.location.reload();
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Failed to assign Professional",
+                    text: "An error occurred while assigning the Professional.",
+                });
+            }
+        })
+        .catch(function (error) {
+            console.error(error);
+            Swal.fire({
+                icon: "error",
+                title: "Failed to assign Professional",
+                text: "An error occurred while assigning the Professional.",
+            });
+        }
+    );
+}
+
+function assignSupportId(supportId) {
+    document.getElementById('support_id').value = supportId;
+}
+
+function setProfessionalDetails(professionalId, professionalFirstName, professionalLastName, professionalEmail) {
+    var professionalIdInput = document.getElementById('professional_id');
+    professionalIdInput.value = professionalId;
+
+    chosen_professional = document.getElementById('chosen_professional');
+    chosen_professional.innerHTML = professionalFirstName+' '+professionalLastName+' : '+professionalEmail;
+
+}
+
+
+function addProfessional() {
+    const formData = new FormData(document.getElementById('addProfessionalForm'));
+    if (document.getElementById('professional_status').checked) {
+        formData.set('professional_status', 'active'); // or leave it blank if you prefer
+    }else{
+        formData.set('professional_status', 'inactive');
+    }
+
+    Swal.fire({
+        title: 'Adding Professional...',
+        text: 'Please wait while we process your request.',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+    
+    axios.post('addprofessional', formData,    
+        {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function (response) {
+            if (response.data.status === 'success') {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Professional successfully added.",
+                    icon: "success"
+                }).then(() => {
+                    window.location.reload();
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Failed to add Professional",
+                    text: response.data.message || "An error occurred while adding the Professional.",
+                });
+            }
+        }  )
+        .catch(function (error) {               
+            console.error(error);
+            Swal.fire({
+                icon: "error",
+                title: "Failed to add Professional",
+                text: "An error occurred while adding the Professional.",
+            });
+        });
+}
+
+
+function changeProfessionalStatus(checkbox) {
+    var statusSpan = document.getElementById('addProfessionalStatus');
+    if (checkbox) {
+        statusSpan.innerHTML = 'Active';
+        statusSpan.classList.remove('text-warning', 'text-success');
+        statusSpan.classList.add('text-success');
+    } else {
+        statusSpan.innerHTML = 'Inactive';
+        statusSpan.classList.remove('text-success', 'text-warning');
+        statusSpan.classList.add('text-warning');
+    }
+}
+
+function viewDiary(diaryTitle, diaryContents) {
+    document.getElementById('diary_title').value = diaryTitle;
+
+    let contentHTML = '';
+
+    try {
+        let delta;
+        if (typeof diaryContents === 'string') {
+            diaryContents = diaryContents.replace(/[\u0000-\u001F]+/g, "");
+            delta = JSON.parse(diaryContents);
+        } else {
+            delta = diaryContents;
+        }
+
+        const converter = new QuillDeltaToHtmlConverter(delta, {});
+        contentHTML = converter.convert();
+    } catch (e) {
+        console.error("Invalid Delta or already HTML:", e);
+        contentHTML = diaryContents; 
+    }
+
+    document.getElementById('diary_view').innerHTML = contentHTML;
+}
+
 
 $(document).ready(function() {
     $('.datatables').DataTable({
@@ -748,3 +894,5 @@ $(document).ready(function() {
         }
     });
 });
+
+

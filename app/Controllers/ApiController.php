@@ -502,4 +502,87 @@ class ApiController extends BaseController
             'message' => 'Notice added successfully'
         ]);
     }
+
+    function assignProfessional()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'support_id' => 'required|integer',
+            'professional_id' => 'required|integer',
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        
+        $professionalData = $this->request->getJSON();
+        if (!$professionalData) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing professional data'
+            ])->setStatusCode(400);
+        }
+
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->assignProfessional($professionalData);
+
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to assign a Professional'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Professional assigned successfully',
+            'data' => $result['data'] ?? null
+        ]);
+    }
+
+    function addProfessional()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'first_name' => 'required|min_length[2]|max_length[50]',
+            'last_name' => 'required|min_length[2]|max_length[50]',
+            'email_address' => 'required|valid_email',
+            'phone_number' => 'required|min_length[10]|max_length[15]',
+            'professional_status' => 'required|in_list[active,inactive]'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        
+        $professionalData = $this->request->getJSON();
+        if (!$professionalData) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing professional data'
+            ])->setStatusCode(400);
+        }
+
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->addProfessional($professionalData);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to add a Professional'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Professional added successfully'
+        ]);
+    }
 }

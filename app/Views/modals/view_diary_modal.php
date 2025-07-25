@@ -1,5 +1,5 @@
   <div class="modal fade" id="viewdiary" tabindex="-1" role="dialog" aria-labelledby="Viewdiary" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-body p-0">
           <div class="card card-plain">
@@ -10,11 +10,10 @@
               <form role="form text-left">
                 <label>Diary Title</label>
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Notice Title" aria-label="noticetitle" aria-describedby="noticetitle-addon">
+                  <input type="text" class="form-control" placeholder="Diary Title" aria-label="diary_title" aria-describedby="diarytitle-addon" id="diary_title" name="diary_title">
                 </div>
                 <label>Diary Contents</label>
-                <div class="input-group mb-3">
-                  <textarea class="form-control" placeholder="Notice Contents" aria-label="noticecontents" aria-describedby="noticecontents-addon"></textarea>
+                <div class="input-group mb-3" id="diary_view">
                 </div>
               </form>
             </div>
