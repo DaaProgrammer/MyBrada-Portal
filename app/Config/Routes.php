@@ -46,3 +46,8 @@ $routes->post('addnotice', 'ApiController::addNotice');
 $routes->post('asssignprofessional', 'ApiController::assignProfessional');
 $routes->post('addprofessional', 'ApiController::addProfessional');
 
+//Edit API Routes
+$routes->post('editresponder', 'ApiController::editResponder');
+$routes->post('editnewsfeed', 'ApiController::editNewsfeed');
+$routes->post('editnotice', 'ApiController::editNotice');
+$routes->post('editprofessional', 'ApiController::editProfessional');

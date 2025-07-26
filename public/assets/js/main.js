@@ -1,3 +1,4 @@
+
     function isTokenExpired(token) {
         const payload = JSON.parse(atob(token.split('.')[1]));
         return payload.exp < Math.floor(Date.now() / 1000);
@@ -464,7 +465,7 @@
     function addResponder() {
         const formData = new FormData(document.getElementById('addResponderForm'));
 
-        if (document.getElementById('responder_status').checked) {
+        if (document.getElementById('add_responder_status').checked) {
             formData.set('responder_status', 'active'); // or leave it blank if you prefer
         }else{
             formData.set('responder_status', 'inactive');
@@ -514,16 +515,18 @@
 
 
   function changeDispatcherStatus(checkbox) {
-    var statusSpan = document.getElementById('addResponderStatus');
-    if (checkbox) {
-        statusSpan.innerHTML = 'Active';
-        statusSpan.classList.remove('text-warning', 'text-success');
-        statusSpan.classList.add('text-success');
-    } else {
-        statusSpan.innerHTML = 'Inactive';
-        statusSpan.classList.remove('text-success', 'text-warning');
-        statusSpan.classList.add('text-warning');
-    }
+    var statusSpans = document.querySelectorAll('.responderStatus');
+    statusSpans.forEach(function(statusSpan) {
+        if (checkbox) {
+            statusSpan.innerHTML = 'Active';
+            statusSpan.classList.remove('text-warning', 'text-success');
+            statusSpan.classList.add('text-success');
+        } else {
+            statusSpan.innerHTML = 'Inactive';
+            statusSpan.classList.remove('text-success', 'text-warning');
+            statusSpan.classList.add('text-warning');
+        }
+    });
 }
 
 let editorInstance;
@@ -896,3 +899,58 @@ $(document).ready(function() {
 });
 
 
+function editResponder() {
+    const formData = new FormData(document.getElementById('editResponderForm'));
+
+    if (document.getElementById('edit_responder_status').checked) {
+        formData.set('responder_status', 'active'); // or leave it blank if you prefer
+    }else{
+        formData.set('responder_status', 'inactive');
+    }
+
+    Swal.fire({
+        title: 'Updating Responder...',
+        text: 'Please wait while we process your request.',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+
+    axios.post('editresponder', formData,    
+        {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function (response) {
+            if (response.data.status === 'success') {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Responder successfully updated.",
+                    icon: "success"
+                }).then(() => {
+                    window.location.reload();
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Failed to update Responder",
+                    text: response.data.message || "An error occurred while updating the Responder.",
+                });
+            }
+        }  )
+        .catch(function (error) {               
+            console.error(error);
+            Swal.fire({
+                icon: "error",
+                title: "Failed to update Responder",
+                text: "An error occurred while updating the Responder.",
+            });
+        });
+}
+
+function assignResponderId(responderId, responderEmail) {
+    document.getElementById('responder_id_input').value = responderId;
+    document.getElementById('responder_email').value = responderEmail;
+}

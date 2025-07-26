@@ -70,6 +70,17 @@ class ApiModel extends Model
 
     public function deleteResponder($userId)
     {
+        $db = $this->service->initializeDatabase('mybrada_noticies', 'responder_uid');
+
+        try{
+            $data = $db->delete($userId);
+        }
+        catch(Exception $e){
+            echo $e->getMessage();
+        }    
+
+
+
         $db = $this->service->initializeDatabase('mybrada_users', 'id');
         try{
             $data = $db->delete($userId);
@@ -402,6 +413,36 @@ class ApiModel extends Model
         return [
             'status' => 'success',
             'message' => 'Professional added successfully',
+            'data' => $data
+        ];
+    }
+
+    function editResponder($responderData) {
+        $db = $this->service->initializeDatabase('mybrada_users', 'id');
+
+        $query = [
+            'first_name' => $responderData->first_name,
+            'last_name' => $responderData->last_name,
+            'phone_number' => $responderData->phone,
+            'status' => $responderData->responder_status ?? 'inactive'
+        ];
+
+        try {
+            $data = $db->update($responderData->responder_id_input, $query);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        if (!$data) {
+            return [
+                'status' => 'error',
+                'message' => 'Failed to edit responder'
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'message' => 'Responder edited successfully',
             'data' => $data
         ];
     }

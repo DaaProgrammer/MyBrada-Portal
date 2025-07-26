@@ -56,14 +56,15 @@ class DashboardStatsModel extends Model
         }
 
 
-        $db = $this->service->initializeDatabase('mybrada_dispatcher', 'id');
+        $db = $this->service->initializeDatabase('mybrada_users', 'id');
 
         $query = [
             'select' => '*',
-            'from'   => 'mybrada_dispatcher',
+            'from'   => 'mybrada_users',
             'where' => 
             [
-                'status' => 'eq.active'
+                'status' => 'eq.active',
+                'user_role' => 'eq.dispatcher'
             ]
         ];
 
@@ -104,7 +105,7 @@ class DashboardStatsModel extends Model
             'from'   => 'mybrada_support',
             'where' => 
             [
-                'status' => 'eq.unassigned '
+                'status' => 'eq.unassigned'
             ]
         ];
 

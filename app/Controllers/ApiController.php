@@ -585,4 +585,46 @@ class ApiController extends BaseController
             'message' => 'Professional added successfully'
         ]);
     }
+
+    function editResponder()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'responder_id_input' => 'required|integer',
+            'first_name' => 'required|min_length[2]|max_length[50]',
+            'last_name' => 'required|min_length[2]|max_length[50]',
+            'phone' => 'required|min_length[10]|max_length[15]',
+            'responder_status' => 'required|in_list[active,inactive]'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        
+        $responderData = $this->request->getJSON();
+        if (!$responderData) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing responder data'
+            ])->setStatusCode(400);
+        }
+
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->editResponder($responderData);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to edit a Responder'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Responder edited successfully'
+        ]);
+    }
 }
