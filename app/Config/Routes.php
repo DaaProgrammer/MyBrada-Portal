@@ -51,3 +51,4 @@ $routes->post('editresponder', 'ApiController::editResponder');
 $routes->post('editnewsfeed', 'ApiController::editNewsfeed');
 $routes->post('editnotice', 'ApiController::editNotice');
 $routes->post('editprofessional', 'ApiController::editProfessional');
+$routes->get('getpostdetails/(:num)', 'ApiController::getPostDetails/$1');

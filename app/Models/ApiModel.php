@@ -446,4 +446,64 @@ class ApiModel extends Model
             'data' => $data
         ];
     }
+
+    function editNewsfeed($newsfeedData) {
+        $db = $this->service->initializeDatabase('mybrada_newsfeed', 'id');
+
+        $query = [
+            'image_path' => $newsfeedData->image ?? null,
+            'post_title' => $newsfeedData->title,
+            'post_content' => $newsfeedData->ckeditor,
+            'status' => $newsfeedData->post_status ?? 'draft',
+            'category' => $newsfeedData->category,
+        ];
+
+        try {
+            $data = $db->update($newsfeedData->post_id, $query);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        if (!$data) {
+            return [
+                'status' => 'error',
+                'message' => 'Failed to edit newsfeed post'
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'message' => 'Post edited successfully',
+            'data' => $data
+        ];
+    }
+
+    function getPostDetails($postId) {
+        $db = $this->service->initializeDatabase('mybrada_newsfeed', 'id');
+
+        $query = [
+            'select' => '*',
+            'from'   => 'mybrada_newsfeed',
+            'where'  => ['id' => 'eq.'.$postId]
+        ];
+
+        try {
+            $data = $db->createCustomQuery($query)->getResult();
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        if (empty($data)) {
+            return [
+                'status' => 'error',
+                'message' => 'Post not found'
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'message' => 'Post details retrieved successfully',
+            'data' => $data[0]
+        ];
+    }
 }

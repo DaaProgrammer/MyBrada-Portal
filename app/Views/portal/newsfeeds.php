@@ -30,6 +30,7 @@
                       <?php
                         $category = ucfirst($post->category);
                         $title = htmlspecialchars($post->post_title);
+                        $contents = $post->post_content;
                         $dateCreated = date('Y-m-d', strtotime($post->date_created));
                         $status = strtolower($post->status);
                         $statusClass = $status === 'published' ? 'bg-gradient-success' : 'bg-gradient-warning';
@@ -61,7 +62,7 @@
                         </td>
                         <td class="align-middle text-center">
                           <div class="ms-auto">
-                            <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#editPost">
+                            <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#editPost" onclick="getPostDetails('<?= $post->id ?>')">
                               <i class="fa fa-pencil" style="font-size:25px;color:green"></i>
                             </a>
                             <a class="btn btn-link text-danger text-gradient mb-0" href="javascript:;" onclick="deletePost(<?= $post->id ?>)">

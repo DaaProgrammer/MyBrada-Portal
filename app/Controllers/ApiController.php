@@ -627,4 +627,73 @@ class ApiController extends BaseController
             'message' => 'Responder edited successfully'
         ]);
     }
+
+    function editNewsfeed()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'post_id' => 'required|integer',
+            'title' => 'required|min_length[3]|max_length[100]',
+            'ckeditor' => 'required|min_length[10]',
+            'category' => 'required|in_list[news,blog,resources]',
+            'post_status' => 'required|in_list[draft,published]'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        
+        $newsfeedData = $this->request->getJSON();
+        if (!$newsfeedData) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing newsfeed data'
+            ])->setStatusCode(400);
+        }
+
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->editNewsfeed($newsfeedData);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to edit a Newsfeed'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Newsfeed edited successfully'
+        ]);
+    }
+
+
+    function getPostDetails($postId)
+    {
+        if (!$postId) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing post_id'
+            ])->setStatusCode(400);
+        }
+
+        $ApiModel = new ApiModel();
+        $data = $ApiModel->getPostDetails($postId);
+
+        if (!$data) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Post not found'
+            ])->setStatusCode(404);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'data' => $data
+        ]);
+    }
 }
+

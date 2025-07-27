@@ -1,4 +1,50 @@
 
+        
+$(document).ready(function() {
+    $('.datatables').DataTable({
+        dom: '<"custom-header"f>rt<"bottom"lip><"clear">',
+        "paging": true,
+        "searching": true,
+        "info": false,
+        "lengthChange": false
+    });
+
+    document.querySelectorAll('textarea[name="ckeditor"]').forEach((textarea, index) => {
+        ClassicEditor
+            .create(textarea)
+            .then(editor => {
+                // You can store each editor instance if needed
+                window['editorInstance' + index] = editor;
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    });
+
+
+    const previews = document.querySelectorAll('.image_preview');
+    const widget = uploadcare.Widget('[role=uploadcare-uploader]');
+
+    widget.onUploadComplete(function(info) {
+        console.log("Uploaded file CDN URL:", info.cdnUrl);
+        previews.forEach(preview => {
+            preview.style.display = 'block';
+            preview.src = info.cdnUrl;
+        });
+    });
+
+    widget.onChange(function(file) {
+        if (!file) {
+            // File was removed
+            previews.forEach(preview => {
+                preview.style.display = 'none';
+                preview.src = '';
+            });
+        }
+    });
+});
+
+    let editorInstance;
     function isTokenExpired(token) {
         const payload = JSON.parse(atob(token.split('.')[1]));
         return payload.exp < Math.floor(Date.now() / 1000);
@@ -529,8 +575,8 @@
     });
 }
 
-let editorInstance;
-function addNewsfeed() {
+
+async function addNewsfeed() {
     const editorData = editorInstance.getData(); // or editorInstance.getData() if you're using CKEditor 5
     document.getElementById('post_content_add').value = editorData;
 
@@ -859,46 +905,6 @@ function viewDiary(diaryTitle, diaryContents) {
     document.getElementById('diary_view').innerHTML = contentHTML;
 }
 
-
-$(document).ready(function() {
-    $('.datatables').DataTable({
-        dom: '<"custom-header"f>rt<"bottom"lip><"clear">',
-        "paging": true,
-        "searching": true,
-        "info": false,
-        "lengthChange": false
-    });
-
-    ClassicEditor
-    .create(document.querySelector('textarea[name="ckeditor"]'))
-    .then(editor => {
-        editorInstance = editor; // store reference globally
-    })
-    .catch(error => {
-      console.error(error);
-    });
-
-
-    const preview = document.getElementById('image_preview');
-    const widget = uploadcare.Widget('[role=uploadcare-uploader]');
-
-    widget.onUploadComplete(function(info) {
-        console.log("Uploaded file CDN URL:", info.cdnUrl);
-        preview.style.display = 'block';
-        preview.src = info.cdnUrl;
-    });
-
-
-    widget.onChange(function(file) {
-        if (!file) {
-            // File was removed
-            preview.style.display = 'none';
-            preview.src = '';
-        }
-    });
-});
-
-
 function editResponder() {
     const formData = new FormData(document.getElementById('editResponderForm'));
 
@@ -953,4 +959,157 @@ function editResponder() {
 function assignResponderId(responderId, responderEmail) {
     document.getElementById('responder_id_input').value = responderId;
     document.getElementById('responder_email').value = responderEmail;
+}
+
+
+
+function getPostDetails(postId) {
+    // const postId = document.getElementById('post_id_edit').value;
+    if (!postId) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Post ID is missing. Please try again.'
+        });
+        return;
+    }
+
+    axios.get(`getpostdetails/${postId}`)
+        .then(response => {
+            if (response.data.status === 'success') {
+                var postDetails = response.data.data.data;
+                assignPostDetails(postDetails.id, postDetails.category, postDetails.post_title, postDetails.post_content, postDetails.image_path, postDetails.status);
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: response.data.message || 'Failed to fetch post details.'
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching post details:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'An error occurred while fetching post details.'
+            });
+        });
+}
+
+
+
+async function assignPostDetails(postId, category, title, content, imgPath, status) {
+ 
+    document.getElementById('post_id_edit').value = postId; 
+    document.getElementById('post_category_edit').value = category;
+    document.getElementById('post_title_edit').value = title;
+    document.getElementById('post_image_edit').src = imgPath;
+    document.getElementById('post_status_edit').checked = (status === 'draft'); 
+    if(status === 'draft') {
+        document.getElementById('post_status_edit').value = 'draft';
+        const checkbox = document.getElementById('post_status_edit');
+        checkbox.checked = true;
+        checkbox.setAttribute('checked', 'checked');
+
+    }
+    else {
+        document.getElementById('post_status_edit').value = 'published';
+        const checkbox = document.getElementById('post_status_edit');
+        checkbox.checked = false;
+
+    }
+    document.getElementById('post_status_edit').value = status;
+    document.getElementById('chosen_category_edit').textContent = category.charAt(0).toUpperCase() + category.slice(1);
+    // Initialize the editor with the existing content
+  
+    const contentField = document.getElementById('post_content_edit');
+
+
+    // Wait for editorInstance to destroy if it exists
+    if (window.editorInstance) {
+        await window.editorInstance.destroy();
+        window.editorInstance = null;
+    }
+
+    // Set content value first, then initialize the editor
+    contentField.value = content;
+    contentField.style.display = 'block';
+
+    // Initialize editor (assuming initializeEditor returns the editor instance)
+    window.editorInstance = await initializeEditor(contentField, content);
+
+}
+
+function decodeHTMLEntities(text) {
+    const textarea = document.createElement("textarea");
+    textarea.innerHTML = text;
+    return textarea.value;
+}
+
+
+function initializeEditor(element, content) {
+  return ClassicEditor
+    .create(element)
+    .then(editor => {
+      editor.setData(content);
+      return editor;
+    });
+}
+
+
+
+
+
+function editNewsfeed() {
+    const editorData = editorInstance.getData(); // or editorInstance.getData() if you're using CKEditor 5
+    document.getElementById('post_content_edit').value = editorData;
+
+    const form = document.getElementById('editNewsfeedForm');
+    const formData = new FormData(form);
+
+    if (!document.getElementById('post_status_edit').checked) {
+        formData.set('post_status', 'published'); // or leave it blank if you prefer
+    }
+    
+    Swal.fire({
+        title: 'Editing Post...',
+        text: 'Please wait while we process your request.',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+    
+    axios.post('editnewsfeed', formData,    
+        {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function (response) {
+            if (response.data.status === 'success') {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Post successfully updated.",
+                    icon: "success"
+                }).then(() => {
+                    window.location.reload();
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Failed to update Post",
+                    text: response.data.message || "An error occurred while updating the Post.",
+                });
+            }
+        }  )
+        .catch(function (error) {               
+            console.error(error);
+            Swal.fire({
+                icon: "error",
+                title: "Failed to update Post",
+                text: "An error occurred while updating the Post.",
+            });
+        });
 }
