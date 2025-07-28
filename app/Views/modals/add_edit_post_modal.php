@@ -85,6 +85,7 @@
                     data-clearable="true"
                     data-crop="1:1"
                     data-images-only="true"
+                    id="image_preview_hidden_input"
                   />
 
                 </div>

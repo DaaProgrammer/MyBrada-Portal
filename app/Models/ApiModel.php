@@ -451,7 +451,7 @@ class ApiModel extends Model
         $db = $this->service->initializeDatabase('mybrada_newsfeed', 'id');
 
         $query = [
-            'image_path' => $newsfeedData->image ?? null,
+            'image_path' => $newsfeedData->image_path ?? null,
             'post_title' => $newsfeedData->title,
             'post_content' => $newsfeedData->ckeditor,
             'status' => $newsfeedData->post_status ?? 'draft',
@@ -504,6 +504,36 @@ class ApiModel extends Model
             'status' => 'success',
             'message' => 'Post details retrieved successfully',
             'data' => $data[0]
+        ];
+    }
+
+    function editNotice($noticeData) {
+        $db = $this->service->initializeDatabase('mybrada_noticies', 'id');
+
+        $query = [
+            'notice_title' => $noticeData->notice_title,
+            'notice_content' => $noticeData->notice_contents,
+            'responder_uid' => $noticeData->responder_uid ?? null,
+            'status' => $noticeData->notice_status ?? 'draft',
+        ];
+
+        try {
+            $data = $db->update($noticeData->notice_id, $query);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        if (!$data) {
+            return [
+                'status' => 'error',
+                'message' => 'Failed to edit notice'
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'message' => 'Notice edited successfully',
+            'data' => $data
         ];
     }
 }

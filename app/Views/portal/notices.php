@@ -72,7 +72,8 @@
                           </td>
                           <td class="align-middle text-center">
                             <div class="ms-auto">
-                              <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#editNotice">
+                              <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#editNotice" onclick="
+                                 setEditNoticeDetails('<?= $noticeId ?>', '<?= htmlspecialchars($noticeTitle) ?>', '<?= htmlspecialchars($notice->notice_content ?? '') ?>', '<?= htmlspecialchars($user?->id ?? '') ?>')">
                                 <i class="fa fa-pencil" style="font-size:25px;color:green" title="Edit Notice"></i>
                               </a>
                               <a class="btn btn-link text-danger text-gradient mb-0" href="javascript:;" onclick="deleteNotice(<?= $noticeId ?>)" title="Delete Notice">

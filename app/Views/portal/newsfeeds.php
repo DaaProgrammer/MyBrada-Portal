@@ -83,4 +83,5 @@
       </div>
 
       
-<?= view('modals/add_edit_post_modal') ?>
+<?= view('modals/add_modals/add_post_modal') ?>
+<?= view('modals/edit_modals/edit_post_modal') ?>

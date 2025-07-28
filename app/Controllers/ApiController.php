@@ -633,6 +633,7 @@ class ApiController extends BaseController
         helper('form');
         $validation = \Config\Services::validation();
         $rules = [
+            'image_path' => 'required', // 2MB max
             'post_id' => 'required|integer',
             'title' => 'required|min_length[3]|max_length[100]',
             'ckeditor' => 'required|min_length[10]',
@@ -693,6 +694,48 @@ class ApiController extends BaseController
         return $this->response->setJSON([
             'status' => 'success',
             'data' => $data
+        ]);
+    }
+
+    function editNotice()
+    {
+        helper('form');
+        $validation = \Config\Services::validation();
+        $rules = [
+            'notice_id' => 'required|integer',
+            'notice_title' => 'required|min_length[3]|max_length[100]',
+            'notice_contents' => 'required|min_length[10]',
+            'responder_uid' => 'required|integer',
+            'notice_status' => 'required|in_list[published,draft]'
+        ];
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ])->setStatusCode(422);
+        }
+        
+        $noticeData = $this->request->getJSON();
+        if (!$noticeData) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Missing notice data'
+            ])->setStatusCode(400);
+        }
+
+        $ApiModel = new ApiModel();
+        $result = $ApiModel->editNotice($noticeData);
+
+        if (!$result) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to edit a Notice'
+            ])->setStatusCode(500);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Notice edited successfully'
         ]);
     }
 }

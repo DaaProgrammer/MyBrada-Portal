@@ -1,5 +1,6 @@
 
         
+
 $(document).ready(function() {
     $('.datatables').DataTable({
         dom: '<"custom-header"f>rt<"bottom"lip><"clear">',
@@ -14,37 +15,42 @@ $(document).ready(function() {
             .create(textarea)
             .then(editor => {
                 // You can store each editor instance if needed
-                window['editorInstance' + index] = editor;
+                // window['editorInstance' + index] = editor;
+                editorInstance = editor; // store reference globally
+                editDataInstance = editor; // store reference globally
             })
             .catch(error => {
                 console.error(error);
             });
     });
 
+    const uploaderInputs = document.querySelectorAll('[role=uploadcare-uploader]');
+    
+    uploaderInputs.forEach((input) => {
+        const widget = uploadcare.Widget(input);
+        const context = input.dataset.context; // 'add' or 'edit'
+        const previewSelector = `.image_preview_${context}`;
+        const previews = document.querySelectorAll(previewSelector);
 
-    const previews = document.querySelectorAll('.image_preview');
-    const widget = uploadcare.Widget('[role=uploadcare-uploader]');
-
-    widget.onUploadComplete(function(info) {
-        console.log("Uploaded file CDN URL:", info.cdnUrl);
-        previews.forEach(preview => {
+        widget.onUploadComplete(function (info) {
+        previews.forEach((preview) => {
             preview.style.display = 'block';
             preview.src = info.cdnUrl;
         });
-    });
+        });
 
-    widget.onChange(function(file) {
+        widget.onChange(function (file) {
         if (!file) {
-            // File was removed
-            previews.forEach(preview => {
-                preview.style.display = 'none';
-                preview.src = '';
+            previews.forEach((preview) => {
+            preview.style.display = 'none';
+            preview.src = '';
             });
         }
+        });
     });
 });
 
-    let editorInstance;
+
     function isTokenExpired(token) {
         const payload = JSON.parse(atob(token.split('.')[1]));
         return payload.exp < Math.floor(Date.now() / 1000);
@@ -575,57 +581,58 @@ $(document).ready(function() {
     });
 }
 
+let editorInstance;
 
 async function addNewsfeed() {
-    const editorData = editorInstance.getData(); // or editorInstance.getData() if you're using CKEditor 5
-    document.getElementById('post_content_add').value = editorData;
+  if (!editorInstance) {
+    Swal.fire("Error", "Editor is still loading. Please wait.", "error");
+    return;
+  }
 
-    const form = document.getElementById('addNewsfeedForm');
-    const formData = new FormData(form);
+  
+  const editorData = editorInstance.getData();
+  if (!editorData.trim()) {
+    Swal.fire("Error", "Post content cannot be empty.", "error");
+    return;
+  }
 
-    if (!document.getElementById('post_status').checked) {
-        formData.set('post_status', 'published'); // or leave it blank if you prefer
+  const form = document.getElementById('addNewsfeedForm');
+  const formData = new FormData(form);
+  formData.set('ckeditor', editorData); // override editor field
+
+  if (!document.getElementById('post_status').checked) {
+    formData.set('post_status', 'published');
+  }
+
+  const imgSrc = document.querySelector('.image_preview_add')?.src;
+  formData.set('image_path', imgSrc);
+
+  Swal.fire({
+    title: 'Adding Post...',
+    text: 'Please wait while we process your request.',
+    allowOutsideClick: false,
+    didOpen: () => Swal.showLoading()
+  });
+
+  try {
+    const response = await axios.post('addnewsfeed', formData, {
+      headers: { 'Content-Type': 'application/json' }
+    }); // ✅ no content-type override
+
+
+    if (response.data.status === 'success') {
+      Swal.fire("Success!", "Post successfully added.", "success")
+        .then(() => window.location.reload());
+    } else {
+      throw new Error(response.data.message || "An unknown error occurred.");
     }
-    Swal.fire({
-        title: 'Adding Post...',
-        text: 'Please wait while we process your request.',
-        allowOutsideClick: false,
-        didOpen: () => {
-            Swal.showLoading();
-        }
-    });
-    axios.post('addnewsfeed', formData,    
-        {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(function (response) {
-            if (response.data.status === 'success') {
-                Swal.fire({
-                    title: "Success!",
-                    text: "Post successfully added.",
-                    icon: "success"
-                }).then(() => {
-                    window.location.reload();
-                });
-            } else {
-                Swal.fire({
-                    icon: "error",
-                    title: "Failed to add Post",
-                    text: response.data.message || "An error occurred while adding the Post.",
-                });
-            }
-        }  )
-        .catch(function (error) {               
-            console.error(error);
-            Swal.fire({
-                icon: "error",
-                title: "Failed to add Post",
-                text: "An error occurred while adding the Post.",
-            });
-        });
+  } catch (error) {
+    console.error(error);
+    Swal.fire("Error", "Failed to add Post.", "error");
+  }
 }
+
+
 
 
 function setPostStatus(){
@@ -633,6 +640,14 @@ function setPostStatus(){
     const postStatus = postStatusCheckbox.checked ? 'draft' : 'published';
     postStatusCheckbox.value = postStatus; // Set the value to 'draft' or 'published'
 }
+
+
+function setPostStatusEdit(){
+    const postStatusCheckbox = document.getElementById('post_status_edit');
+    const postStatus = postStatusCheckbox.checked ? 'draft' : 'published';
+    postStatusCheckbox.value = postStatus; // Set the value to 'draft' or 'published'
+}
+
 
 function setAddPostCategory(category) {
     document.getElementById('chosen_category').textContent = category;
@@ -658,6 +673,27 @@ function setResponderDetails(responderData, responderUid, responderName, respond
 
     console.log("Responder Details Set:", responderDetailsInput.value);
 }
+
+
+function setResponderDetailsEdit(responderData, responderUid, responderName, responderLastName, responderEmail) {
+    var selectedResponder = document.getElementById('chosen_responder_edit');
+    var responderDetailsInput = document.getElementById('responder_details_edit');
+    var responder_uid = document.getElementById('responder_uid_edit');
+    // var first_name = document.getElementById('first_nameResponder_edit');
+    // var last_name = document.getElementById('last_nameResponder_edit');
+    // var email = document.getElementById('emailResponder_edit');
+
+    selectedResponder.innerHTML = responderData;
+    responderDetailsInput.value = responderData;
+    responder_uid.value = responderUid;
+
+    // first_name.value = responderName;
+    // last_name.value = responderLastName;
+    // email.value = responderEmail;
+
+    console.log("Responder Details Set:", responderDetailsInput.value);
+}
+
 
 function assignAlerId(alertId) {
    document.getElementById('alert_id_responder').value = alertId;  
@@ -1004,7 +1040,7 @@ async function assignPostDetails(postId, category, title, content, imgPath, stat
     document.getElementById('post_id_edit').value = postId; 
     document.getElementById('post_category_edit').value = category;
     document.getElementById('post_title_edit').value = title;
-    document.getElementById('post_image_edit').src = imgPath;
+    document.getElementById('image_preview_edit').src = imgPath;
     document.getElementById('post_status_edit').checked = (status === 'draft'); 
     if(status === 'draft') {
         document.getElementById('post_status_edit').value = 'draft';
@@ -1023,21 +1059,16 @@ async function assignPostDetails(postId, category, title, content, imgPath, stat
     document.getElementById('chosen_category_edit').textContent = category.charAt(0).toUpperCase() + category.slice(1);
     // Initialize the editor with the existing content
   
-    const contentField = document.getElementById('post_content_edit');
+    // const contentField = document.getElementById('post_content_edit');
 
+    // if (window.editorInstance) {
+    //     await window.editorInstance.destroy();
+    //     window.editorInstance = null;
+    // }
+    // contentField.value = content;
+    // contentField.style.display = 'block';
 
-    // Wait for editorInstance to destroy if it exists
-    if (window.editorInstance) {
-        await window.editorInstance.destroy();
-        window.editorInstance = null;
-    }
-
-    // Set content value first, then initialize the editor
-    contentField.value = content;
-    contentField.style.display = 'block';
-
-    // Initialize editor (assuming initializeEditor returns the editor instance)
-    window.editorInstance = await initializeEditor(contentField, content);
+    // window.editorInstance = await initializeEditor(contentField, content);
 
 }
 
@@ -1061,27 +1092,77 @@ function initializeEditor(element, content) {
 
 
 
-function editNewsfeed() {
-    const editorData = editorInstance.getData(); // or editorInstance.getData() if you're using CKEditor 5
-    document.getElementById('post_content_edit').value = editorData;
+async function editNewsfeed() {
+  if (!editorInstance) {
+    Swal.fire("Error", "Editor is still loading. Please wait.", "error");
+    return;
+  }
 
-    const form = document.getElementById('editNewsfeedForm');
-    const formData = new FormData(form);
+  
+  const editorData = editorInstance.getData();
+  if (!editorData.trim()) {
+    Swal.fire("Error", "Post content cannot be empty.", "error");
+    return;
+  }
+  
 
-    if (!document.getElementById('post_status_edit').checked) {
-        formData.set('post_status', 'published'); // or leave it blank if you prefer
+  document.getElementById('post_content_edit').value = editorData;
+
+  const form = document.getElementById('editNewsfeedForm');
+  const formData = new FormData(form);
+
+  if (!document.getElementById('post_status_edit').checked) {
+    formData.set('post_status', 'published');
+  }
+
+  
+  formData.set('ckeditor', 'editorData'); // override editor field
+
+  const imgSrc = document.querySelector('.image_preview_edit')?.src;
+  formData.set('image_path', imgSrc);
+
+  Swal.fire({
+    title: 'Updating Post...',
+    text: 'Please wait while we process your request.',
+    allowOutsideClick: false,
+    didOpen: () => Swal.showLoading()
+  });
+
+  try {
+    const response = await axios.post('editnewsfeed', formData, {
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    if (response.data.status === 'success') {
+      Swal.fire("Success!", "Post successfully updated.", "success")
+        .then(() => window.location.reload());
+    } else {
+      throw new Error(response.data.message || "An unknown error occurred.");
     }
-    
+  } catch (error) {
+    console.error(error);
+    Swal.fire("Error", "Failed to update Post.", "error");
+  }
+}
+
+
+function editNotice() {
+    const formData = new FormData(document.getElementById('editNoticeForm'));
+    if (document.getElementById('post_status_edit').checked) {
+        formData.set('notice_status', 'draft'); // or leave it blank if you prefer 
+    }
+    else {
+        formData.set('notice_status', 'published');
+    }   
     Swal.fire({
-        title: 'Editing Post...',
+        title: 'Updating Notice...',
         text: 'Please wait while we process your request.',
         allowOutsideClick: false,
         didOpen: () => {
             Swal.showLoading();
         }
     });
-    
-    axios.post('editnewsfeed', formData,    
+    axios.post('editnotice', formData,
         {
             headers: {
                 'Content-Type': 'application/json'
@@ -1091,7 +1172,7 @@ function editNewsfeed() {
             if (response.data.status === 'success') {
                 Swal.fire({
                     title: "Success!",
-                    text: "Post successfully updated.",
+                    text: "Notice successfully updated.",
                     icon: "success"
                 }).then(() => {
                     window.location.reload();
@@ -1099,17 +1180,32 @@ function editNewsfeed() {
             } else {
                 Swal.fire({
                     icon: "error",
-                    title: "Failed to update Post",
-                    text: response.data.message || "An error occurred while updating the Post.",
+                    title: "Failed to update Notice",
+                    text: response.data.message || "An error occurred while updating the Notice.",
                 });
             }
-        }  )
-        .catch(function (error) {               
+        })
+        .catch(function (error) {
             console.error(error);
             Swal.fire({
                 icon: "error",
-                title: "Failed to update Post",
-                text: "An error occurred while updating the Post.",
+                title: "Failed to update Notice",
+                text: "An error occurred while updating the Notice.",
             });
-        });
+        }
+    );  
+}
+
+function setEditNoticeDetails(noticeId, noticeTitle, noticeContent, responderUid) {
+    document.getElementById('notice_id_edit').value = noticeId;
+    document.getElementById('notice_title_edit').value = noticeTitle;
+    document.getElementById('notice_content_edit').value = noticeContent;
+    document.getElementById('responder_uid_edit').value = responderUid;
+
+    // Set the responder details if available
+    if (responderUid) {
+        setResponderDetails(`Responder ID: ${responderUid}`, responderUid, '', '', '');
+    } else {
+        setResponderDetails('', '', '', '', '');
+    }
 }
