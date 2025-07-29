@@ -992,9 +992,12 @@ function editResponder() {
         });
 }
 
-function assignResponderId(responderId, responderEmail) {
+function assignResponderId(responderId,responderFirstname, responderLastname, responderEmail, responderPhonenumber) {
     document.getElementById('responder_id_input').value = responderId;
     document.getElementById('responder_email').value = responderEmail;
+    document.getElementById('responder_firstname').value = responderFirstname;
+    document.getElementById('responder_lastname').value = responderLastname;
+    document.getElementById('responder_phonenumber').value = responderPhonenumber;
 }
 
 
@@ -1206,13 +1209,78 @@ function setEditNoticeDetails(noticeId, noticeTitle, noticeContent, responderUid
     document.getElementById('responder_uid_edit').value = responderUid;
 }
 
+function setEditProfessionalDetails(professionalId, firstName, lastName, email, phoneNumber, status) {
+    let myModal = new bootstrap.Modal(document.getElementById('editProfessional'));
+    myModal.show();
 
-// $(document).ready(function() {
-//   $('#addNotice').on('shown.bs.modal', function () {
-//     console.log('Add Notice modal fully shown');
-//   });
+    document.getElementById('professional_id').value = professionalId;
+    document.getElementById('first_nameProfessional').value = firstName;
+    document.getElementById('last_nameProfessional').value = lastName;
+    document.getElementById('email_addressProfessional').value = email;
+    document.getElementById('phone_numberProfessional').value = phoneNumber;
+    document.getElementById('professional_status').checked = (status === 'active');
+    document.getElementById('professional_status').value = status;
+    document.getElementById('responder_id_input').value = professionalId; // Assuming you want to set the responder ID to the professional ID
 
-//   $('#editNotice').on('shown.bs.modal', function () {
-//     console.log('Edit Notice modal fully shown');
-//   });
-// });
+    const statusSpan = document.getElementById('editProfessionalStatus');
+    if (status === 'active') {
+        statusSpan.innerHTML = 'Active';
+        statusSpan.classList.remove('text-warning', 'text-success');
+        statusSpan.classList.add('text-success');
+    } else {
+        statusSpan.innerHTML = 'Inactive';
+        statusSpan.classList.remove('text-success', 'text-warning');
+        statusSpan.classList.add('text-warning');
+    }
+}
+
+function editProfessional() {
+    const formData = new FormData(document.getElementById('editProfessionalForm'));
+
+    if (document.getElementById('professional_status').checked) {
+        formData.set('professional_status', 'active'); // or leave it blank if you prefer
+    } else {
+        formData.set('professional_status', 'inactive');
+    }
+
+    Swal.fire({
+        title: 'Updating Professional...',
+        text: 'Please wait while we process your request.',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+
+    axios.post('editprofessional', formData,    
+        {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function (response) {
+            if (response.data.status === 'success') {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Professional successfully updated.",
+                    icon: "success"
+                }).then(() => {
+                    window.location.reload();
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Failed to update Professional",
+                    text: response.data.message || "An error occurred while updating the Professional.",
+                });
+            }
+        }  )
+        .catch(function (error) {               
+            console.error(error);
+            Swal.fire({
+                icon: "error",
+                title: "Failed to update Professional",
+                text: "An error occurred while updating the Professional.",
+            });
+        });
+}

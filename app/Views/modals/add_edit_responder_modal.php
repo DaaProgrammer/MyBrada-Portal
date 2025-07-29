@@ -12,19 +12,19 @@
               <form role="form text-left" id="editResponderForm">
                 <label>First Name</label>
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="name-addon" name="first_name">
+                  <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="name-addon" name="first_name" id="responder_firstname">
                 </div>
                 <label>Last Name</label>
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Last Name" aria-label="Name" aria-describedby="name-addon" name="last_name">
+                  <input type="text" class="form-control" placeholder="Last Name" aria-label="Name" aria-describedby="name-addon" name="last_name" id="responder_lastname">
                 </div>
                 <label>Email</label>
                 <div class="input-group mb-3">
-                  <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon" name="email" id="responder_email" readonly>
+                  <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon" name="email" id="responder_email" disabled readonly>
                 </div>
                 <label>Phone Number</label>
                 <div class="input-group mb-3">
-                  <input type="phone" class="form-control" placeholder="Phone" aria-label="Phone" aria-describedby="phone-addon" name="phone">
+                  <input type="phone" class="form-control" placeholder="Phone" aria-label="Phone" aria-describedby="phone-addon" name="phone" id="responder_phonenumber">
                 </div>
 
                 <div class="form-check form-switch">

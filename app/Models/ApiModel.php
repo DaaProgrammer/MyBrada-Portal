@@ -536,4 +536,34 @@ class ApiModel extends Model
             'data' => $data
         ];
     }
+
+    function editProfessional($professionalData) {
+        $db = $this->service->initializeDatabase('mybrada_professionals', 'id');
+
+        $query = [
+            'first_name' => $professionalData->first_name,
+            'last_name' => $professionalData->last_name,
+            'phone_number' => $professionalData->phone_number ?? null,
+            'status' => $professionalData->professional_status ?? 'inactive',
+        ];
+
+        try {
+            $data = $db->update($professionalData->professional_id, $query);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        if (!$data) {
+            return [
+                'status' => 'error',
+                'message' => 'Failed to edit professional'
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'message' => 'Professional edited successfully',
+            'data' => $data
+        ];
+    }
 }

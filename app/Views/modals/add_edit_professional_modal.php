@@ -12,24 +12,25 @@
               <form role="form text-left" id="editProfessionalForm">
                 <label>First Name</label>
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="name-addon" name="first_name">
+                  <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="name-addon" name="first_name" id="first_nameProfessional">
                 </div>
                 <label>Last Name</label>
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Last Name" aria-label="Name" aria-describedby="name-addon" name="last_name">
+                  <input type="text" class="form-control" placeholder="Last Name" aria-label="Name" aria-describedby="name-addon" name="last_name" id="last_nameProfessional">
                 </div>
                 <label>Email</label>
                 <div class="input-group mb-3">
-                  <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon" name="email_address">
+                  <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon" name="email_address" id="email_addressProfessional" disabled readonly>
                 </div>
                 <label>Phone Number</label>
                 <div class="input-group mb-3">
-                  <input type="phone" class="form-control" placeholder="Phone" aria-label="Phone" aria-describedby="phone-addon" name="phone_number">
+                  <input type="phone" class="form-control" placeholder="Phone" aria-label="Phone" aria-describedby="phone-addon" name="phone_number" id="phone_numberProfessional">
                 </div>
                 <div class="form-check form-switch">
                   <input type="checkbox" class="form-check-input" id="professional_status" onchange="changeProfessionalStatus(this.checked)">
-                  <label for="professional_status" class="mb-0">Professional status: <span id="addProfessionalStatus" class="text text-warning">Inactive</span></label>
+                  <label for="professional_status" class="mb-0">Professional status: <span id="editProfessionalStatus" class="text text-warning">Inactive</span></label>
                 </div>
+                <input type="hidden" id="responder_id_input" name="professional_id">
                 <div class="text-center">
                   <button type="button" class="btn bg-gradient-primary btn-lg btn-rounded w-100 mt-4 mb-0" onclick="editProfessional()">Update Professional</button>
                 </div>

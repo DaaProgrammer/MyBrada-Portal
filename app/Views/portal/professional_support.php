@@ -151,7 +151,7 @@
                           </td>
                           <td class="align-middle text-center">
                             <div class="ms-auto">
-                              <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#assignProfessional">
+                              <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#editProfessional" onclick="setEditProfessionalDetails(<?= $item->id ?>, '<?= htmlspecialchars($item->first_name) ?>', '<?= htmlspecialchars($item->last_name) ?>', '<?= htmlspecialchars($item->email_address) ?>', '<?= htmlspecialchars($item->phone_number) ?>', <?= $item->status === 'active' ? 'true' : 'false' ?>)">
                                 <i class="fa fa-pencil" style="font-size:25px;color:green"></i>
                               </a>
                               <a class="btn btn-link text-danger text-gradient mb-0" href="javascript:;" onclick="deleteProfessional(<?= $item->id ?>)">

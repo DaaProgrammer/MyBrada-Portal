@@ -59,7 +59,7 @@
                         </td>
                         <td class="align-middle text-center">
                           <div class="ms-auto">
-                            <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#editResponder" onclick="assignResponderId('<?= $responder->id ?>', '<?= htmlspecialchars($responder->email_address)  ?>')"><i class="fa fa-pencil" style="font-size:25px;color:green"></i></a>
+                            <a class="btn btn-link text-success text-gradient mb-0" href="javascript:;" data-bs-toggle="modal" data-bs-target="#editResponder" onclick="assignResponderId('<?= $responder->id ?>', '<?= htmlspecialchars($responder->first_name)  ?>', '<?= htmlspecialchars($responder->last_name)  ?>', '<?= htmlspecialchars($responder->email_address)  ?>', '<?= htmlspecialchars($responder->phone_number)  ?>')"><i class="fa fa-pencil" style="font-size:25px;color:green"></i></a>
                             <a class="btn btn-link text-danger text-gradient mb-0" href="javascript:;" onclick="deleteResponder(<?= $responder->id ?>)"><i class="fa fa-trash-o" style="font-size:25px;color:red"></i></a>
                           </div>
                         </td>
