@@ -29,7 +29,7 @@
                 </div>
                 <label>Post Contents</label>
                 <div class="input-group mb-3">
-                  <textarea class="form-control" placeholder="Post Contents" aria-label="postcontents" aria-describedby="postcontents-addon" name="ckeditor" cols="30" rows="5" id="post_content_edit"></textarea>
+                  <textarea class="form-control" placeholder="Post Contents" aria-label="postcontents" aria-describedby="postcontents-addon" name="ckeditor_edit" cols="30" rows="5" id="post_content_edit"></textarea>
                 </div>
                 <label>Post Category</label>
                 <div class="input-group mb-3 d-flex align-items-center">
@@ -38,9 +38,9 @@
                       Choose Category
                     </button>
                     <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownMenuButton">
-                      <li><a class="dropdown-item border-radius-md" href="javascript:;" onclick="setAddPostCategory('news')">News</a></li>
-                      <li><a class="dropdown-item border-radius-md" href="javascript:;" onclick="setAddPostCategory('blog')">Blog</a></li>
-                      <li><a class="dropdown-item border-radius-md" href="javascript:;" onclick="setAddPostCategory('resources')">Resources</a></li>
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;" onclick="setEditPostCategory('news')">News</a></li>
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;" onclick="setEditPostCategory('blog')">Blog</a></li>
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;" onclick="setEditPostCategory('resources')">Resources</a></li>
                     </ul>
                   </div>
                   <h6 class="mb-0" id="chosen_category_edit">News</h6>
@@ -49,8 +49,8 @@
                 </div>
 
                 <div class="form-check form-switch d-flex align-items-center">
-                  <input type="checkbox" class="form-check-input" id="post_status_edit" name="post_status" value="published" onchange="setPostStatus()">
-                  <label for="post_status" class="mb-0">Save as draft?
+                  <input type="checkbox" class="form-check-input" id="post_status_edit" name="post_status" value="published" onchange="setPostStatusEdit()">
+                  <label for="post_status_edit" class="mb-0">Save as draft?
                 </div>
 
                 <div class="text-center">

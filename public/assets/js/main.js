@@ -17,7 +17,6 @@ $(document).ready(function() {
                 // You can store each editor instance if needed
                 // window['editorInstance' + index] = editor;
                 editorInstance = editor; // store reference globally
-                editDataInstance = editor; // store reference globally
             })
             .catch(error => {
                 console.error(error);
@@ -582,7 +581,8 @@ $(document).ready(function() {
 }
 
 let editorInstance;
-
+let editDataInstance;
+                
 async function addNewsfeed() {
   if (!editorInstance) {
     Swal.fire("Error", "Editor is still loading. Please wait.", "error");
@@ -650,11 +650,15 @@ function setPostStatusEdit(){
 
 
 function setAddPostCategory(category) {
-    document.getElementById('chosen_category').textContent = category;
+    document.getElementById('chosen_category').textContent = category.charAt(0).toUpperCase() + category.slice(1);;
     document.getElementById('post_category').value = category;
 }
 
-
+function setEditPostCategory(category) {
+    document.getElementById('chosen_category_edit').textContent = category.charAt(0).toUpperCase() + category.slice(1);;
+    document.getElementById('post_category_edit').value = category;
+    console.log("Category set to:", category);
+}
 function setResponderDetails(responderData, responderUid, responderName, responderLastName, responderEmail) {
     var selectedResponder = document.getElementById('chosen_responder');
     var responderDetailsInput = document.getElementById('responder_details');
@@ -1039,7 +1043,6 @@ function getPostDetails(postId) {
 
 
 async function assignPostDetails(postId, category, title, content, imgPath, status) {
- 
     document.getElementById('post_id_edit').value = postId; 
     document.getElementById('post_category_edit').value = category;
     document.getElementById('post_title_edit').value = title;
@@ -1060,18 +1063,19 @@ async function assignPostDetails(postId, category, title, content, imgPath, stat
     }
     document.getElementById('post_status_edit').value = status;
     document.getElementById('chosen_category_edit').textContent = category.charAt(0).toUpperCase() + category.slice(1);
+    document.getElementById('post_category_edit').value = category;
     // Initialize the editor with the existing content
   
-    // const contentField = document.getElementById('post_content_edit');
+    const contentField = document.getElementById('post_content_edit');
 
     // if (window.editorInstance) {
     //     await window.editorInstance.destroy();
     //     window.editorInstance = null;
     // }
-    // contentField.value = content;
-    // contentField.style.display = 'block';
+    contentField.value = content;
+    contentField.style.display = 'block';
 
-    // window.editorInstance = await initializeEditor(contentField, content);
+    window.editorInstance = await initializeEditor(contentField, content);
 
 }
 
@@ -1082,13 +1086,19 @@ function decodeHTMLEntities(text) {
 }
 
 
-function initializeEditor(element, content) {
-  return ClassicEditor
-    .create(element)
-    .then(editor => {
-      editor.setData(content);
-      return editor;
-    });
+async function initializeEditor(element, content) {
+    // Destroy existing editor instance if present
+    if (window.editDataInstance && typeof window.editDataInstance.destroy === 'function') {
+        await window.editDataInstance.destroy();
+        window.editDataInstance = null;
+    }
+    return ClassicEditor
+        .create(element)
+        .then(editor => {
+            editor.setData(content);
+            window.editDataInstance = editor;
+            return editor;
+        });
 }
 
 
@@ -1096,13 +1106,13 @@ function initializeEditor(element, content) {
 
 
 async function editNewsfeed() {
-  if (!editorInstance) {
+  if (!window.editDataInstance) {
     Swal.fire("Error", "Editor is still loading. Please wait.", "error");
     return;
   }
 
   
-  const editorData = editorInstance.getData();
+  const editorData = window.editDataInstance.getData();
   if (!editorData.trim()) {
     Swal.fire("Error", "Post content cannot be empty.", "error");
     return;
@@ -1119,7 +1129,7 @@ async function editNewsfeed() {
   }
 
   
-  formData.set('ckeditor', 'editorData'); // override editor field
+  formData.set('ckeditor', editorData); // override editor field
 
   const imgSrc = document.querySelector('.image_preview_edit')?.src;
   formData.set('image_path', imgSrc);
