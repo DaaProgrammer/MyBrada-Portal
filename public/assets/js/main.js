@@ -1197,15 +1197,22 @@ function editNotice() {
 }
 
 function setEditNoticeDetails(noticeId, noticeTitle, noticeContent, responderUid) {
+    let myModal = new bootstrap.Modal(document.getElementById('editNotice'));
+    myModal.show();
+
     document.getElementById('notice_id_edit').value = noticeId;
     document.getElementById('notice_title_edit').value = noticeTitle;
     document.getElementById('notice_content_edit').value = noticeContent;
     document.getElementById('responder_uid_edit').value = responderUid;
-
-    // Set the responder details if available
-    if (responderUid) {
-        setResponderDetails(`Responder ID: ${responderUid}`, responderUid, '', '', '');
-    } else {
-        setResponderDetails('', '', '', '', '');
-    }
 }
+
+
+// $(document).ready(function() {
+//   $('#addNotice').on('shown.bs.modal', function () {
+//     console.log('Add Notice modal fully shown');
+//   });
+
+//   $('#editNotice').on('shown.bs.modal', function () {
+//     console.log('Edit Notice modal fully shown');
+//   });
+// });
